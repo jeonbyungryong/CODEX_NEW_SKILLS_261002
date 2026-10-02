@@ -12,6 +12,7 @@
 | [실기시험 조율 Skill](skills/coordinate-device-validation/SKILL.md) | 사용자 행동 안내와 시간 예산 검토 |
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
+| [Computer Use 검토](docs/computer-use-assessment.md) | Edge·Chrome·명령 실행·Windows UI의 증거와 미검증 범위 구분 |
 
 ## 현재 상태 요약
 
@@ -21,6 +22,7 @@
 - 같은 입력에서 5.1 배열 수집/Count 결함을 놓친 검토 응답은 Skill 적용 전 5/5, 적용 후 0/5였습니다. PowerShell 5.1·7의 기초 실행 시험은 각각 17개 통과했으나 전체 운영 인계가 검증된 것은 아닙니다.
 - 기존 제품 전용 release-gate는 유지합니다. 이 저장소에 복제하거나 전역 교체하지 않습니다.
 - 이 저장소는 지침 파일 모음입니다. 브라우저 연결·포트·권한을 고치는 프로그램이나 장치 제어 도구가 아닙니다.
+- Computer Use 특화 Skill은 생성 보류입니다. Edge·Chrome 격리 시험과 PowerShell 실행 경로를 검토했으나 추가 Skill의 효과는 입증하지 못했습니다. 현재 Windows UI 모듈의 초기화·창 목록 조회 성공도 화면 읽기·클릭 성공과는 구분합니다.
 - 전역 설치, 설치 후 자동 선택, 실제 장치 시험, 사용자 시간·토큰 절감은 미검증입니다.
 
 ## Skill 설치
