@@ -13,17 +13,17 @@
 | [실기시험 조율 Skill](skills/coordinate-device-validation/SKILL.md) | 사용자 행동 안내와 시간 예산 검토 |
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
-| [Computer Use 검토](docs/computer-use-assessment.md) | Edge·Chrome·명령 실행·Windows UI의 증거와 미검증 범위 구분 |
+| [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거와 10월 3일 파일 전송·번역·권한·정리 후속 검토 |
 
 ## 현재 상태 요약
 
-2026-10-02 · v0.2 제한적 채택. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
+2026-10-03 문서 갱신 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
 
 - 범위·수용 기준, 실행 계층 진단, 재개 지원 후보 3개는 이번 기준선에서 추가 Skill 필요성이 확인되지 않아 생성 보류했습니다.
 - 같은 입력에서 5.1 배열 수집/Count 결함을 놓친 검토 응답은 Skill 적용 전 5/5, 적용 후 0/5였습니다. PowerShell 5.1·7의 기초 실행 시험은 각각 17개 통과했으나 전체 운영 인계가 검증된 것은 아닙니다.
 - 기존 제품 전용 release-gate는 유지합니다. 이 저장소에 복제하거나 전역 교체하지 않습니다.
 - 이 저장소는 지침 파일 모음입니다. 브라우저 연결·포트·권한을 고치는 프로그램이나 장치 제어 도구가 아닙니다.
-- Computer Use 특화 Skill은 생성 보류입니다. Edge·Chrome 격리 시험과 PowerShell 실행 경로를 검토했으나 추가 Skill의 효과는 입증하지 못했습니다. 현재 Windows UI 모듈의 초기화·창 목록 조회 성공도 화면 읽기·클릭 성공과는 구분합니다.
+- Computer Use 특화 Skill은 생성 보류입니다. 후속 시험에서 내장 브라우저와 Chrome 공식 확장 경로의 작은 합성 파일 전송을 각각 확인했습니다. Chrome은 사용자 파일 URL 접근 설정 변경 보고 후 업로드 1회·다운로드와 전체 바이트 일치까지 확인했지만, 새 Skill의 추가 효과를 입증한 것은 아닙니다. 화면 번역·권한 차단·시험 서버 강제 종료의 한계는 [후속 검토](docs/computer-use-assessment.md#2026-10-03-파일-전송-후속-검토)에 분리했습니다. Edge 파일 전송·대용량 파일·Windows 기본 파일 대화상자와 Windows UI URL 판별 복구는 미검증입니다.
 - 단일 Windows PC에서 두 Skill 설치·3개 파일 일치·명시 경로 지정 적용·후속 사용 가능 목록 등록을 확인했습니다. 적절한 자동 선택, 실제 장치 수락, 사용자 시간·토큰 절감은 미검증입니다. [설치 후 검증 범위](docs/installation-verification.md)를 참고하세요.
 
 ## Skill 설치
