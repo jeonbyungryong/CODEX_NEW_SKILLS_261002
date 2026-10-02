@@ -9,6 +9,7 @@
 | [설계와 채택 기준](docs/design.md) | 후보 4개, 중복 제거, 조사·비평 방법 |
 | [검증 결과와 제한](docs/validation.md) | 기준선, 동일 입력 A/B, 추가 사례, 미검증 범위 |
 | [설치·사용 안내](docs/usage.md) | 파일로 시험 사용, 설치 요청, 적용 예시 |
+| [설치 후 검증](docs/installation-verification.md) | 단일 PC 설치·명시 경로 지정 적용·셸 실행 확인과 미검증 범위 |
 | [실기시험 조율 Skill](skills/coordinate-device-validation/SKILL.md) | 사용자 행동 안내와 시간 예산 검토 |
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
@@ -23,7 +24,7 @@
 - 기존 제품 전용 release-gate는 유지합니다. 이 저장소에 복제하거나 전역 교체하지 않습니다.
 - 이 저장소는 지침 파일 모음입니다. 브라우저 연결·포트·권한을 고치는 프로그램이나 장치 제어 도구가 아닙니다.
 - Computer Use 특화 Skill은 생성 보류입니다. Edge·Chrome 격리 시험과 PowerShell 실행 경로를 검토했으나 추가 Skill의 효과는 입증하지 못했습니다. 현재 Windows UI 모듈의 초기화·창 목록 조회 성공도 화면 읽기·클릭 성공과는 구분합니다.
-- 전역 설치, 설치 후 자동 선택, 실제 장치 시험, 사용자 시간·토큰 절감은 미검증입니다.
+- 단일 Windows PC에서 두 Skill 설치·3개 파일 일치·명시 경로 지정 적용·후속 사용 가능 목록 등록을 확인했습니다. 적절한 자동 선택, 실제 장치 수락, 사용자 시간·토큰 절감은 미검증입니다. [설치 후 검증 범위](docs/installation-verification.md)를 참고하세요.
 
 ## Skill 설치
 
