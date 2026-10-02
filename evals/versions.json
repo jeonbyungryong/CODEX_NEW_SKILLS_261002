@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-02",
+  "hash_algorithm": "SHA256",
+  "encoding": "UTF-8",
+  "pre_revision": {
+    "covered_runs": ["A/B comparison candidate arm", "H1", "H2", "H3"],
+    "skills/coordinate-device-validation/SKILL.md": "E075926CF0E00407B5FE6173701DCDD5CC555A50960C947634864A0583989176",
+    "skills/coordinate-device-validation/references/timing-budget.md": "3A846675BC790BE772BD8108E9CAECB4BCC3DA3EAE486CCEBC3CC0BDE92BB225"
+  },
+  "published_revision": {
+    "targeted_regression": "R1 before formatting-only change",
+    "skills/coordinate-device-validation/SKILL.md": "7AD1A4033351DEEAD4EB9D88AA83EBCA82A3646047E18916624AC10A0F91173B",
+    "skills/coordinate-device-validation/references/timing-budget.md": "829FD3ACF773A3A93F162D28AF56FD14346C418928C43CB9CE5A0FDAD59CD8F2"
+  },
+  "formatting_only_change": "After R1, three Markdown hard-break trailing spaces were replaced with blank blockquote lines. Instructions unchanged; behavioral trials were not rerun for this presentation-only change. R1 used the pre_revision SKILL.md hash and published_revision timing-budget.md hash.",
+  "note": "H4 was metadata-only selection, not execution of the candidate. Full A/B was not rerun after the one reference revision. Hashes refer to saved file bytes."
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-02",
+  "note": "Response lengths are UTF-16 code units, not tokens. Outer tool calls may contain multiple read commands. No elapsed-time or cost savings measured.",
+  "runs": [
+    {
+      "run": "A1",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 579
+    },
+    {
+      "run": "B1",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 4,
+      "response_utf16_characters": 815
+    },
+    {
+      "run": "A2",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 637
+    },
+    {
+      "run": "B2",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 849
+    },
+    {
+      "run": "A3",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 580
+    },
+    {
+      "run": "B3",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 4,
+      "response_utf16_characters": 1038
+    },
+    {
+      "run": "A4",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 629
+    },
+    {
+      "run": "B4",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 881
+    },
+    {
+      "run": "A5",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 615
+    },
+    {
+      "run": "B5",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "outer_tool_calls": 2,
+      "read_commands": 2,
+      "response_utf16_characters": 905
+    }
+  ]
+}
