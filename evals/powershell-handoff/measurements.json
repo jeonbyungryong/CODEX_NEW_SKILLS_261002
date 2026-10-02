@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "date": "2026-10-02",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "context": "fresh; no model/effort overrides; synthetic reviewers no tool calls",
+  "candidate_sha256": "4619EEDF5AA58DF0F80BAA234B650660F076EEC52C9AAA2A6B1E235177A12B93",
+  "same_input": {
+    "control_samples": 5,
+    "guided_samples": 5,
+    "control_shape_resolved": 0,
+    "guided_shape_resolved": 5,
+    "other_three_criteria": {
+      "control": 5,
+      "guided": 5
+    }
+  },
+  "grading": {
+    "method": "independent, response order shuffled, group labels concealed; reviewer given runtime mechanism evidence",
+    "response_mapping": [
+      "A4",
+      "B2",
+      "A1",
+      "B5",
+      "B1",
+      "A3",
+      "B4",
+      "A5",
+      "B3",
+      "A2"
+    ],
+    "parent": "read all responses and checked mapped criteria; partial snippets are not complete wrappers"
+  },
+  "holdouts": {
+    "H2": "PASS: local rehearsal/identity/whitespace/raw bytes and no push-as-test",
+    "H3": "PASS: verified copy separated from remote state, preserve concurrency",
+    "J0": "PASS: empty is zero and null entry retained for rejection",
+    "J1": "PASS: singleton count not multi-record proof; schema and wrapper return shape"
+  },
+  "runtime": {
+    "powershell51": {
+      "version": "5.1.26100.9444",
+      "checks": 17,
+      "failures": 0,
+      "direct_count": 1
+    },
+    "powershell7": {
+      "version": "7.6.5",
+      "checks": 17,
+      "failures": 0,
+      "direct_count": 3
+    }
+  },
+  "structure": {
+    "manual_constrained_frontmatter": "PASS",
+    "official_quick_validate": "NOT_RUN successfully: PyYAML unavailable; no dependency installed"
+  },
+  "decision": "limited adoption, one frozen candidate cycle; no guided-output tuning",
+  "limits": [
+    "single primary scenario and five samples per arm; no statistical or cross-model claim",
+    "reviews are synthetic, not browser/device execution",
+    "runtime probe verifies primitives, not actual production helper or complete user entry point",
+    "all skill interactions, installation/auto selection, real time/token savings NOT_RUN",
+    "independent reviewer noted helper-output decoding wording ambiguity and hash-agreement wording precision; not counted as a newly proven runtime regression"
+  ]
+}

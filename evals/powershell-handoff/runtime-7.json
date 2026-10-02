@@ -1,0 +1,77 @@
+{
+  "engine": "7.6.5",
+  "tests": 17,
+  "failures": 0,
+  "controlCount": 3,
+  "checks": [
+    {
+      "name": "empty array",
+      "pass": true
+    },
+    {
+      "name": "singleton",
+      "pass": true
+    },
+    {
+      "name": "three records",
+      "pass": true
+    },
+    {
+      "name": "null retained",
+      "pass": true
+    },
+    {
+      "name": "null not silently dropped",
+      "pass": true
+    },
+    {
+      "name": "nested retained",
+      "pass": true
+    },
+    {
+      "name": "nested not flattened",
+      "pass": true
+    },
+    {
+      "name": "reject {\"path\":\"not-array\"}",
+      "pass": true
+    },
+    {
+      "name": "reject null",
+      "pass": true
+    },
+    {
+      "name": "reject [{\"path\":}]",
+      "pass": true
+    },
+    {
+      "name": "historical direct-pipeline shape reproduced",
+      "pass": true
+    },
+    {
+      "name": "assignment normal nonempty shape",
+      "pass": true
+    },
+    {
+      "name": "native zero exit captured",
+      "pass": true
+    },
+    {
+      "name": "native argument boundaries and unicode",
+      "pass": true
+    },
+    {
+      "name": "UTF8 log unicode roundtrip",
+      "pass": true
+    },
+    {
+      "name": "native nonzero exit captured",
+      "pass": true
+    },
+    {
+      "name": "nonzero cannot reach readiness",
+      "pass": true
+    }
+  ],
+  "limit": "Synthetic native argv/exit/log probe, not a production helper or complete publication workflow"
+}
