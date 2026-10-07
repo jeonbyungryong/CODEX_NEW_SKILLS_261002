@@ -14,10 +14,13 @@
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
 | [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거와 10월 3일 파일 전송·번역·권한·정리 후속 검토 |
+| [DWG 적용 점검](docs/dwg-application-review-20261007.md) | 실제 로딩·실행 근거, 기존 Skill 유지와 Computer Use 신규 생성 보류 결정 |
 
 ## 현재 상태 요약
 
-2026-10-03 문서 갱신 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
+2026-10-07 DWG 적용 점검 반영 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
+
+- DWG 현재 PC의 승인된 개발·검증·인계는 종료됐습니다. PowerShell Skill의 명시 로딩과 실제 5.1 검증·의도적 실패 처리 근거를 확보했습니다. 장치 조율 Skill은 조건부 유지하며, Computer Use 신규 Skill은 기존 지침 대비 추가 효과가 입증되지 않아 생성 보류합니다. 제품 성공과 Skill 효과, 다음 AutoCAD·타PC 수용을 구분합니다. 기존 Skill 본문과 설치 상태는 이번 문서 게시로 바뀌지 않습니다.
 
 - 범위·수용 기준, 실행 계층 진단, 재개 지원 후보 3개는 이번 기준선에서 추가 Skill 필요성이 확인되지 않아 생성 보류했습니다.
 - 같은 입력에서 5.1 배열 수집/Count 결함을 놓친 검토 응답은 Skill 적용 전 5/5, 적용 후 0/5였습니다. PowerShell 5.1·7의 기초 실행 시험은 각각 17개 통과했으나 전체 운영 인계가 검증된 것은 아닙니다.
