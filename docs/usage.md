@@ -45,3 +45,23 @@ Skill은 사용 조건을 설명하는 metadata와 실행 시 읽을 지침·참
 ```
 
 설치 후 사용 가능 목록에 있다면 `$verify-powershell-handoff`로 지정할 수 있습니다. [검증 결과와 한계](powershell-handoff.md)를 먼저 읽으세요. 일반 Computer Use 진단이나 Git push 권한을 해결하는 Skill이 아닙니다. 평가용 Python probe는 Skill의 필수 설치 구성요소가 아닙니다.
+
+## Windows native Computer Use 진단·복구
+
+[설계·현재 증거·검증 범위](computer-use-recovery-20261007.md)를 읽고 `skills/diagnose-computer-use-recovery/SKILL.md`와 전체 폴더를 유지한 채 파일 지정으로 시험합니다.
+
+```text
+이 저장소의 diagnose-computer-use-recovery SKILL.md를 읽고 현재 PC의 Computer Use 오류를 조사해줘.
+오류: [현재 동일 시도 오류]
+환경: [Windows/Codex 버전, native 도구, intended/effective sandbox 모드]
+요청 기능: [창 목록/상태/캡처/좌표/입력]
+기존 수행: [재시작 횟수, 임시 변경과 원복 상태]
+승인 범위: 우선 읽기 전용 진단. 추가 복구는 기존 승인 범위를 확인해 진행.
+보호할 작업: [저장하지 않은 앱/파일; 원본은 공개하지 않음]
+```
+
+설치하려면 저장소 URL과 `skills/diagnose-computer-use-recovery` 폴더를 지정해 명시적으로 요청합니다. 설치 후 사용 가능 목록에서 확인되면 `$diagnose-computer-use-recovery`를 사용할 수 있습니다. 게시·clone·파일 지정 시험은 전역 설치와 다릅니다.
+
+Python이 있다면 [입력 계약](../skills/diagnose-computer-use-recovery/references/input-contract.md)에 따라 로컬 분류 도구를 실행합니다. 실제 로그는 저장소 밖에 두고 새 출력 경로를 지정합니다. 없으면 지침의 분기표를 사용합니다. 출력은 실제 복구가 아닌 제공된 증거의 요약입니다.
+
+수정 전 커밋을 기록하고 전용 브랜치를 만듭니다. 저장소 루트에서 `python -B evals/computer-use-recovery/test_triage.py`로 회귀 검증합니다. 다른 PC는 자신의 환경에서 기능별 실검증을 추가하고, 문제가 있으면 이전 Skill 버전으로 돌아갑니다. sandbox 임시 설정 원복은 별도로 확인합니다.

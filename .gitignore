@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local Computer Use evidence and author-only validation
+*.local.json
+*.local.log
+local-evidence/
+.validation-deps/

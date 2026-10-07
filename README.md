@@ -15,20 +15,24 @@
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
 | [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거, 파일 전송과 10월 7일 로컬 접속·Edge/Chrome HTTPS 읽기 후속 검토 |
 | [DWG 적용 점검](docs/dwg-application-review-20261007.md) | 실제 로딩·실행 근거, 기존 Skill 유지와 Computer Use 신규 생성 보류 결정 |
+| [Computer Use 진단·복구 Skill](skills/diagnose-computer-use-recovery/SKILL.md) | native setup·파일 충돌·캡처 실패 분류와 승인된 복구/원복 |
+| [새 후보의 실제 증거·검증·타PC 인계](docs/computer-use-recovery-20261007.md) | 18개 회귀 시험, 파일 충돌 재현, 영구 복구 미검증 |
 
 ## 현재 상태 요약
 
-2026-10-07 DWG 적용 점검과 로컬 접속·브라우저 읽기 검토 반영 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
+2026-10-07 사용자 요청의 Windows native Computer Use 진단·복구 후보를 추가해 Skill 3개를 구성했습니다. 기존 두 Skill의 제한적 채택은 유지하고, 새 후보는 실험적 참고·진단 용도로 게시합니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
 
-- DWG 현재 PC의 승인된 개발·검증·인계는 종료됐습니다. PowerShell Skill의 명시 로딩과 실제 5.1 검증·의도적 실패 처리 근거를 확보했습니다. 장치 조율 Skill은 조건부 유지하며, Computer Use 신규 Skill은 기존 지침 대비 추가 효과가 입증되지 않아 생성 보류합니다. 제품 성공과 Skill 효과, 다음 AutoCAD·타PC 수용을 구분합니다. 기존 Skill 본문과 설치 상태는 이번 문서 게시로 바뀌지 않습니다.
+- DWG 현재 PC의 승인된 개발·검증·인계는 종료됐습니다. PowerShell Skill의 명시 로딩과 실제 5.1 검증·의도적 실패 처리 근거를 확보했습니다. 장치 조율 Skill은 조건부 유지하며, 당시 Computer Use 신규 Skill은 추가 효과가 입증되지 않아 생성 보류했습니다. 이후 native 런타임 재현 증거와 사용자 요청으로 좁은 진단 후보를 추가했으며 효과 입증 여부는 별도로 유지합니다. 제품 성공과 Skill 효과, 다음 AutoCAD·타PC 수용을 구분합니다. 기존 Skill 본문과 설치 상태는 이번 문서 게시로 바뀌지 않습니다.
 
 - 범위·수용 기준, 실행 계층 진단, 재개 지원 후보 3개는 이번 기준선에서 추가 Skill 필요성이 확인되지 않아 생성 보류했습니다.
 - 같은 입력에서 5.1 배열 수집/Count 결함을 놓친 검토 응답은 Skill 적용 전 5/5, 적용 후 0/5였습니다. PowerShell 5.1·7의 기초 실행 시험은 각각 17개 통과했으나 전체 운영 인계가 검증된 것은 아닙니다.
 - 기존 제품 전용 release-gate는 유지합니다. 이 저장소에 복제하거나 전역 교체하지 않습니다.
 - 이 저장소는 지침 파일 모음입니다. 브라우저 연결·포트·권한을 고치는 프로그램이나 장치 제어 도구가 아닙니다.
-- Computer Use 특화 Skill은 생성 보류입니다. 후속 시험에서 내장 브라우저와 Chrome 공식 확장 경로의 작은 합성 파일 전송을 각각 확인했습니다. Chrome은 사용자 파일 URL 접근 설정 변경 보고 후 업로드 1회·다운로드와 전체 바이트 일치까지 확인했지만, 새 Skill의 추가 효과를 입증한 것은 아닙니다. 화면 번역·권한 차단·시험 서버 강제 종료의 한계는 [후속 검토](docs/computer-use-assessment.md#2026-10-03-파일-전송-후속-검토)에 분리했습니다. Edge 파일 전송·대용량 파일·Windows 기본 파일 대화상자와 Windows UI URL 판별 복구는 미검증입니다.
+- 과거 브라우저 중심 Computer Use 특화 Skill은 생성 보류했습니다. 후속 시험에서 내장 브라우저와 Chrome 공식 확장 경로의 작은 합성 파일 전송을 각각 확인했습니다. Chrome은 사용자 파일 URL 접근 설정 변경 보고 후 업로드 1회·다운로드와 전체 바이트 일치까지 확인했지만, 새 Skill의 추가 효과를 입증한 것은 아닙니다. 화면 번역·권한 차단·시험 서버 강제 종료의 한계는 [후속 검토](docs/computer-use-assessment.md#2026-10-03-파일-전송-후속-검토)에 분리했습니다. Edge 파일 전송·대용량 파일·Windows 기본 파일 대화상자와 Windows UI URL 판별 복구는 미검증입니다.
 - 10월 7일 제품과 분리된 로컬 접속 기준선과 Edge·Chrome의 공개 HTTPS 읽기를 검토했습니다. URL 형식 거부와 포트 문제를 구분하고, 실패 후 남은 자기 시험 탭만 정리했습니다. 이 관측은 실제 태블릿 제어·과거 권한 차단 해결이나 신규 Skill의 추가 효과를 증명하지 않습니다. [로컬 접속·브라우저 읽기 후속 검토](docs/computer-use-assessment.md#2026-10-07-로컬-접속브라우저-읽기-후속-검토)를 참고하세요.
 - 단일 Windows PC에서 두 Skill 설치·3개 파일 일치·명시 경로 지정 적용·후속 사용 가능 목록 등록을 확인했습니다. 적절한 자동 선택, 실제 장치 수락, 사용자 시간·토큰 절감은 미검증입니다. [설치 후 검증 범위](docs/installation-verification.md)를 참고하세요.
+
+- 새 Computer Use 후보는 공식 형식 검증과 진단 도구 18개 회귀 시험을 통과했습니다. elevated native 오류는 현재 PC에서 재현됐으며 영구 복구와 타PC 효과는 미검증입니다. 미사용 기준선 agent도 핵심 판단을 올바르게 수행했으므로 새 Skill의 추가 효과를 주장하지 않습니다.
 
 ## Skill 설치
 
@@ -40,7 +44,7 @@ skills/coordinate-device-validation 을 검토한 뒤 설치해줘.
 같은 이름의 기존 Skill이 있으면 덮어쓰지 말고 차이를 먼저 알려줘.
 ```
 
-PowerShell 인계에는 같은 방식으로 `skills/verify-powershell-handoff`를 지정하세요. 둘 다 자동 전역 설치하지 않습니다.
+PowerShell 인계에는 같은 방식으로 `skills/verify-powershell-handoff`를 지정하세요. Computer Use 진단에는 `skills/diagnose-computer-use-recovery`를 지정하세요. 세 후보 모두 자동 전역 설치하지 않습니다.
 
 설치 요청 예시일 뿐, 이 저장소를 열거나 다운로드한 것으로 설치가 완료되지는 않습니다. 설치 도구의 결과와 실제 선택 여부를 별도로 확인해야 합니다.
 
