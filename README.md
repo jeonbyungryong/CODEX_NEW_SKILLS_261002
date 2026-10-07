@@ -13,12 +13,12 @@
 | [실기시험 조율 Skill](skills/coordinate-device-validation/SKILL.md) | 사용자 행동 안내와 시간 예산 검토 |
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
-| [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거와 10월 3일 파일 전송·번역·권한·정리 후속 검토 |
+| [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거, 파일 전송과 10월 7일 로컬 접속·Edge/Chrome HTTPS 읽기 후속 검토 |
 | [DWG 적용 점검](docs/dwg-application-review-20261007.md) | 실제 로딩·실행 근거, 기존 Skill 유지와 Computer Use 신규 생성 보류 결정 |
 
 ## 현재 상태 요약
 
-2026-10-07 DWG 적용 점검 반영 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
+2026-10-07 DWG 적용 점검과 로컬 접속·브라우저 읽기 검토 반영 · v0.2 제한적 채택은 유지합니다. 실기시험 조율과 Windows PowerShell 인계 검증 Skill 2개를 구성했습니다. 가상 응답 비교와 일부 실제 로컬 실행을 검증했으며 실제 기기·브라우저 복구 효과나 전체 프로젝트 효율 향상을 입증한 제품은 아닙니다.
 
 - DWG 현재 PC의 승인된 개발·검증·인계는 종료됐습니다. PowerShell Skill의 명시 로딩과 실제 5.1 검증·의도적 실패 처리 근거를 확보했습니다. 장치 조율 Skill은 조건부 유지하며, Computer Use 신규 Skill은 기존 지침 대비 추가 효과가 입증되지 않아 생성 보류합니다. 제품 성공과 Skill 효과, 다음 AutoCAD·타PC 수용을 구분합니다. 기존 Skill 본문과 설치 상태는 이번 문서 게시로 바뀌지 않습니다.
 
@@ -27,6 +27,7 @@
 - 기존 제품 전용 release-gate는 유지합니다. 이 저장소에 복제하거나 전역 교체하지 않습니다.
 - 이 저장소는 지침 파일 모음입니다. 브라우저 연결·포트·권한을 고치는 프로그램이나 장치 제어 도구가 아닙니다.
 - Computer Use 특화 Skill은 생성 보류입니다. 후속 시험에서 내장 브라우저와 Chrome 공식 확장 경로의 작은 합성 파일 전송을 각각 확인했습니다. Chrome은 사용자 파일 URL 접근 설정 변경 보고 후 업로드 1회·다운로드와 전체 바이트 일치까지 확인했지만, 새 Skill의 추가 효과를 입증한 것은 아닙니다. 화면 번역·권한 차단·시험 서버 강제 종료의 한계는 [후속 검토](docs/computer-use-assessment.md#2026-10-03-파일-전송-후속-검토)에 분리했습니다. Edge 파일 전송·대용량 파일·Windows 기본 파일 대화상자와 Windows UI URL 판별 복구는 미검증입니다.
+- 10월 7일 제품과 분리된 로컬 접속 기준선과 Edge·Chrome의 공개 HTTPS 읽기를 검토했습니다. URL 형식 거부와 포트 문제를 구분하고, 실패 후 남은 자기 시험 탭만 정리했습니다. 이 관측은 실제 태블릿 제어·과거 권한 차단 해결이나 신규 Skill의 추가 효과를 증명하지 않습니다. [로컬 접속·브라우저 읽기 후속 검토](docs/computer-use-assessment.md#2026-10-07-로컬-접속브라우저-읽기-후속-검토)를 참고하세요.
 - 단일 Windows PC에서 두 Skill 설치·3개 파일 일치·명시 경로 지정 적용·후속 사용 가능 목록 등록을 확인했습니다. 적절한 자동 선택, 실제 장치 수락, 사용자 시간·토큰 절감은 미검증입니다. [설치 후 검증 범위](docs/installation-verification.md)를 참고하세요.
 
 ## Skill 설치
