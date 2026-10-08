@@ -1,6 +1,10 @@
 # Skills 최종 정리·이번 범위 종료 보고
 
-2026-10-08 Asia/Seoul. 사용자 지정 Edge 제외를 포함한 개인 Skills 검증·문서 정리의 최종 checkpoint입니다. 아래 시험 결과는 보존된 실행 기록을 정리한 것으로, 이번 문서 작업에서 추가 시험한 결과가 아닙니다.
+2026-10-08 Asia/Seoul. 사용자 지정 Edge 제외를 포함한 개인 Skills 검증·문서 정리의 초기 종료 checkpoint입니다. 아래 시험 결과는 보존된 실행 기록을 정리한 것으로, 이번 문서 작업에서 추가 시험한 결과가 아닙니다.
+
+## 후속 checkpoint 안내
+
+이 문서의 초기 BLOCKED와 PARTIAL은 당시 결과로 보존합니다. 사용자의 추가 검증 요청·폴더 한정 PyYAML 설치 승인 후, 공식 형식 Skill 3개는 LIMITED_PASS를 기록했습니다. 같은 합성 입력 1+1 판단은 둘 다 PARTIAL이고, 원복 항목 초안의 별도 답변은 효과 입증이나 채택이 아닙니다. [추가 검증 보고](additional-validation-20261008.md)가 최신 checkpoint입니다. Edge 제외·신규 브라우저 Skill 생성 보류·제품 무조작은 유지합니다.
 
 ## 결론
 
@@ -14,7 +18,7 @@
 | Chrome 공개 HTTPS 조작 | 제한 PASS의 과거 기록 | 읽기·링크 클릭·새로고침 후 현재 대상 재식별·결과 URL/제목 확인. 브라우저 전체 복구 아님 |
 | 오프라인 모의 프로젝트 | 제한 완료의 과거 기록 | PS7/PS5.1 실제 host·child에서 suite12+회귀2, distinct14 사례. 오판 변형 재현·탐지와 정적 검토. 이번에 재실행하지 않음 |
 | 복합 판단 기준선 | PARTIAL | 6항목 중 5충족·1부분 충족. 포트 이전 후 원복 계획 누락을 전체 PASS로 바꾸지 않음 |
-| 이번 공식 형식 재검사 | BLOCKED | PyYAML import 누락. Skill 부적합 판정도 과거 PASS 취소도 아님 |
+| 초기 checkpoint 공식 형식 재검사 | 역사 BLOCKED | PyYAML import 누락. Skill 부적합 판정도 과거 PASS 취소도 아님 |
 | Edge 이번 비교 | 미검증·범위 제외 | 사용자가 일단 제외. 연결 대기나 완료 차단 항목으로 두지 않음 |
 | 과거 saved permission·원래 로컬 포트 장애 복구 | 미검증 | 다른 공개 페이지·합성 서비스 성공에서 복구를 추론하지 않음 |
 | AppContainer/WFP·에뮬레이터 실제 격리 | 미실시/미완료·보류 | 증거 export·순수 단위시험은 실제 격리 PASS가 아님 |
