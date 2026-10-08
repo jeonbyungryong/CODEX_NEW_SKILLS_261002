@@ -15,12 +15,14 @@
 | [실기시험 조율 Skill](skills/coordinate-device-validation/SKILL.md) | 사용자 행동 안내와 시간 예산 검토 |
 | [PowerShell 인계 검증 Skill](skills/verify-powershell-handoff/SKILL.md) | 대상 셸의 JSON 배열·인수·인코딩·실패 처리 검토 |
 | [PowerShell 비교 검증](docs/powershell-handoff.md) | 같은 입력 5+5회와 두 엔진의 실제 기초 실행 시험 |
-| [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거, 파일 전송과 10월 7일 로컬 접속·Edge/Chrome HTTPS 읽기 후속 검토 |
+| [Computer Use 검토](docs/computer-use-assessment.md) | 계층별 증거, 파일 전송과 로컬 접속·Edge/Chrome HTTPS 읽기, 10월 8일 Chrome 조작 후속 관측 |
 | [DWG 적용 점검](docs/dwg-application-review-20261007.md) | 실제 로딩·실행 근거, 기존 Skill 유지와 Computer Use 신규 생성 보류 결정 |
 | [Computer Use 진단·복구 Skill](skills/diagnose-computer-use-recovery/SKILL.md) | native setup·파일 충돌·캡처 실패 분류와 승인된 복구/원복 |
 | [새 후보의 실제 증거·검증·타PC 인계](docs/computer-use-recovery-20261007.md) | 18개 회귀 시험, 파일 충돌 재현, 영구 복구 미검증 |
 
 ## 현재 상태 요약
+
+2026-10-08 Chrome 후속: 별도 공개 HTTPS 문서에서 읽기·링크 클릭과 새로고침 후 대상 재식별을 확인했습니다. URL 정책 거부와 화면 표시 변화는 별도 기록했으며, 로컬 포트·Edge 비교·실제 태블릿 통신이나 신규 Skill의 추가 효과를 입증한 것은 아닙니다. 기존 Skill 3개는 유지합니다. [Chrome 공개 문서 조작 후속 관측](docs/computer-use-assessment.md#2026-10-08-chrome-공개-문서-조작-후속-관측)을 참고하세요.
 
 2026-10-08 후속: 사용자 승인으로 검증 범위를 오프라인 판단·공개 문서 검토로 줄였습니다. 기존 Skill 3개와 설치 상태를 보존하며 브라우저·로컬 접속 신규 Skill은 추가하지 않습니다. AppContainer/WFP·에뮬레이터 격리 실기는 미실시/미완료로 남깁니다. [마감 보고](docs/validation-closeout-20261008.md)는 역사 근거와 이번 실행을 구분합니다.
 
