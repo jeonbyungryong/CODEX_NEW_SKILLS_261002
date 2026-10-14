@@ -1,5 +1,7 @@
 # 설치·사용 안내
 
+초기 기획·상세 명세·개발 우선순위·변경 검토·인계·회고에는 [두 스킬의 단계별 사용법과 복사 요청](planning-review-skills.md)을 사용합니다. `specify-failure-recovery`와 `review-release-evidence`의 개인 설치·프로젝트 설치·동일 이름 처리도 해당 안내에 있습니다. 아래는 기존 세 스킬의 사용법입니다.
+
 ## 먼저 파일로 시험하기
 
 저장소를 받은 뒤 Codex에서 `skills/coordinate-device-validation/SKILL.md`를 파일로 첨부하거나 실제 저장된 전체 경로를 전달합니다. 이렇게 읽게 하는 시험은 전역 설치나 자동 선택과 다릅니다.

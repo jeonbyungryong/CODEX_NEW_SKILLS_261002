@@ -2,9 +2,13 @@
 
 실제 EQ215 태블릿·DWG→PDF 프로젝트에서 반복된 기획, 검수, 문제해결, 기기시험과 Windows 자동화의 판단 방법을 정리한 개인 Codex Skill 저장소입니다. 기존 지침과 비교해 필요성을 검토하며, 제품 성공과 Skill의 추가 효과를 별도로 평가합니다.
 
-## 현재 상태 — 2026-10-08
+## 현재 상태 — 2026-10-14
 
-**승인된 축소 범위의 분석·검증·문서 게시 작업은 완료했습니다.** 기존 Skill 3개를 유지합니다. 모든 접속 장애 해결이나 전체 환경 검증이 완료됐다는 뜻은 아닙니다.
+**기존 Skill 3개를 유지하고, 명세·회고용 참고 Skill 2개를 추가해 총 5개를 제공합니다.** 새 두 스킬의 [초기 기획부터 개발 검토까지 단계별 사용법과 복사할 요청 예시](docs/planning-review-skills.md)를 먼저 읽으세요. 모든 접속 장애 해결이나 전체 환경 검증이 완료됐다는 뜻은 아닙니다.
+
+- 2026-10-14 추가: `specify-failure-recovery`, `review-release-evidence`. 본문 형식·독립 적용·현재 PC 설치본 일치를 확인했습니다. [게시 범위와 검증 한계](docs/planning-review-validation-20261014.md)를 함께 기록합니다. 성능 향상이나 시간 절감을 입증한 판정은 아닙니다.
+
+아래는 기존 세 스킬에 대한 2026-10-08 검증·범위 기록입니다.
 
 - 최신 공식 형식 검사: Skill 3개 **LIMITED_PASS**. 결함 표본 3개와 정상 대조 1개도 예상대로 판정했습니다.
 - 같은 합성 과제의 기준선/기존 체크리스트: 둘 다 **PARTIAL**. 구체적인 원복 절차 누락을 전체 PASS로 바꾸지 않았습니다.
@@ -12,12 +16,14 @@
 - Edge 이번 비교는 사용자 지정으로 **범위 제외**입니다. 신규 브라우저·로컬 접속 Skill과 native 격리·에뮬레이터 적용은 **보류**합니다.
 - 이번 추가 검증·문서 게시에서 완료된 태블릿 프로젝트와 실제 태블릿을 조작하지 않았습니다. 기존 Skill 본문·공개 체크리스트·설치 상태도 변경하지 않았습니다.
 
-최신 근거는 [추가 검증 보고](docs/additional-validation-20261008.md)입니다. 초기 PyYAML 누락에 따른 BLOCKED와 이전 PARTIAL은 당시 기록으로 보존하며, 후속 결과를 소급 적용하지 않습니다.
+기존 세 스킬의 최신 근거는 [10/8 추가 검증 보고](docs/additional-validation-20261008.md)입니다. 초기 PyYAML 누락에 따른 BLOCKED와 이전 PARTIAL은 당시 기록으로 보존하며, 후속 결과를 소급 적용하지 않습니다.
 
-## 제공하는 Skill 3개
+## 제공하는 Skill 5개
 
 | Skill | 용도 | 현재 채택·검증 경계 |
 | --- | --- | --- |
+| [specify-failure-recovery](skills/specify-failure-recovery/SKILL.md) | 초기 명세와 개발 검토에서 오류 발생·보존·복구·해제와 미정 정책을 연결 | 재사용 참고. 단순 오류에는 필요한 항목만 적용하며 제품 수정·실행을 승인하지 않음 |
+| [review-release-evidence](skills/review-release-evidence/SKILL.md) | 후보별 원본·시험·수용 제한을 대조하고 우선순위와 검토 종료 판단 | 재사용 참고. 회고 완료와 제품 수정·재배포를 구분하며 효과·타PC 실사용은 미검증 |
 | [coordinate-device-validation](skills/coordinate-device-validation/SKILL.md) | 사용자와 agent의 실기시험 준비·행동·관측·복귀를 조율하고 시간 예산을 검토 | 조건부 유지. 실제 기기 수락·인증·전원 조작을 대신하지 않음 |
 | [verify-powershell-handoff](skills/verify-powershell-handoff/SKILL.md) | 대상 PowerShell의 JSON 배열·인수·인코딩·실패 처리와 인계 증거 검토 | 제한적 채택 유지. 브라우저 복구·Git 게시·제품 수용 판정을 대신하지 않음 |
 | [diagnose-computer-use-recovery](skills/diagnose-computer-use-recovery/SKILL.md) | Windows native setup·파일 충돌·캡처 실패를 분류하고 승인된 복구/원복을 검토 | 실험적 참고·진단 후보 유지. 영구 복구·타PC 효과·브라우저 전체 복구는 미검증 |
@@ -52,7 +58,16 @@
 
 ## 설치·사용
 
-먼저 [사용 안내](docs/usage.md)를 읽고 지침 파일을 명시적으로 지정해 시험하세요. 전역 설치는 별도 요청과 결과 확인이 필요합니다.
+먼저 [사용 안내](docs/usage.md)를 읽고 지침 파일을 명시적으로 지정해 시험하세요. 전역 설치는 명시적인 요청과 결과 확인을 거칩니다. 이번 두 스킬은 요청자의 기존 개인 설치본이 있어 중복 설치 없이 게시 파일과 일치를 확인했습니다. 다른 사용자의 PC에는 자동 설치되지 않습니다.
+
+기획·명세·개발 검토에는 다음 요청으로 두 스킬만 설치할 수 있습니다. [단계별 안내](docs/planning-review-skills.md)에는 프로젝트 전용 설치와 여섯 단계 요청 예시도 있습니다.
+
+```text
+$skill-installer를 사용해 https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002 의
+skills/specify-failure-recovery 와 skills/review-release-evidence 를 설치해줘.
+같은 이름·같은 내용이면 건너뛰고, 내용이 다르면 기존 수정본을 보존하며 차이를 알려줘.
+설치 파일과 사용 가능 목록을 확인해줘.
+```
 
 ```text
 https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002 의
@@ -60,7 +75,7 @@ skills/coordinate-device-validation 을 검토한 뒤 설치해줘.
 같은 이름의 기존 Skill이 있으면 덮어쓰지 말고 차이를 먼저 알려줘.
 ```
 
-PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진단에는 `skills/diagnose-computer-use-recovery`를 지정할 수 있습니다. 저장소를 열거나 다운로드한 것만으로 설치가 완료되지는 않습니다. 이번 README 정리에서는 설치하지 않습니다.
+PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진단에는 `skills/diagnose-computer-use-recovery`를 지정할 수 있습니다. 저장소를 열거나 다운로드한 것만으로 설치가 완료되지는 않습니다. 필요한 스킬만 선택하세요.
 
 사용 시 목표·승인 범위·현재 상태·실행 환경·복귀 조건과 증거를 제공합니다. 설치되어 사용 가능한 환경에서는 `$coordinate-device-validation` 또는 `$verify-powershell-handoff` 등을 요청에 명시할 수 있습니다. 사용자 실물 관측, 도구 로그, 권고와 실제 완료를 구분하세요.
 
@@ -68,7 +83,9 @@ PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진�
 
 | 문서 | 내용 |
 | --- | --- |
-| [추가 검증 보고 — 최신](docs/additional-validation-20261008.md) | 공식 형식 후속 통과, 1+1 PARTIAL, 구조적 초안·독립 리뷰 한계 |
+| [기획·명세·개발 검토 단계별 사용법](docs/planning-review-skills.md) | 두 스킬의 역할, 여섯 단계 복사 요청, 다른 PC·프로젝트 설치와 중복 방지 |
+| [두 스킬 게시 검증 — 10/14](docs/planning-review-validation-20261014.md) | 저장소 업로드 원칙·기존 세 스킬과의 비교·본문 식별·독립 적용 한계 |
+| [기존 세 스킬 추가 검증 — 10/8](docs/additional-validation-20261008.md) | 공식 형식 후속 통과, 1+1 PARTIAL, 구조적 초안·독립 리뷰 한계 |
 | [초기 최종 정리·범위 종료](docs/final-summary-20261008.md) | 초기 checkpoint와 후속 결과 안내, Edge 제외·재개 조건 |
 | [축소 검증 마감 기록](docs/validation-closeout-20261008.md) | 범위 조정, 초기 형식 BLOCKED·native 격리 보류 |
 | [설계·채택 기준](docs/design.md) | 후보 분석, 기존 기능 중복 제거와 비평 |
