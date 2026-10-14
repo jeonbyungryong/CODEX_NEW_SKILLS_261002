@@ -6,6 +6,8 @@
 
 **기존 Skill 3개를 유지하고, 명세·회고용 참고 Skill 2개를 추가해 총 5개를 제공합니다.** 새 두 스킬의 [초기 기획부터 개발 검토까지 단계별 사용법과 복사할 요청 예시](docs/planning-review-skills.md)를 먼저 읽으세요. 모든 접속 장애 해결이나 전체 환경 검증이 완료됐다는 뜻은 아닙니다.
 
+새 프로젝트에는 [AGENTS.md와 초기 기획·명세 템플릿](templates/README.md)을 적용할 수 있습니다. 오류·복구 계약이나 후보별 완료 판단이 필요한 요청에서만 두 스킬을 선택하도록 구성했습니다.
+
 - 2026-10-14 추가: `specify-failure-recovery`, `review-release-evidence`. 본문 형식·독립 적용·현재 PC 설치본 일치를 확인했습니다. [게시 범위와 검증 한계](docs/planning-review-validation-20261014.md)를 함께 기록합니다. 성능 향상이나 시간 절감을 입증한 판정은 아닙니다.
 
 아래는 기존 세 스킬에 대한 2026-10-08 검증·범위 기록입니다.
@@ -83,6 +85,7 @@ PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진�
 
 | 문서 | 내용 |
 | --- | --- |
+| [새 프로젝트 템플릿](templates/README.md) | 프로젝트용 AGENTS.md, 초기 기획·명세, 조건별 스킬 선택과 복사 요청 |
 | [기획·명세·개발 검토 단계별 사용법](docs/planning-review-skills.md) | 두 스킬의 역할, 여섯 단계 복사 요청, 다른 PC·프로젝트 설치와 중복 방지 |
 | [두 스킬 게시 검증 — 10/14](docs/planning-review-validation-20261014.md) | 저장소 업로드 원칙·기존 세 스킬과의 비교·본문 식별·독립 적용 한계 |
 | [기존 세 스킬 추가 검증 — 10/8](docs/additional-validation-20261008.md) | 공식 형식 후속 통과, 1+1 PARTIAL, 구조적 초안·독립 리뷰 한계 |
