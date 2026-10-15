@@ -141,3 +141,5 @@ Codex는 스킬 변경을 자동 감지한다. 보이지 않으면 새 요청에
 | Windows native Computer Use가 어느 경계에서 실패했는가 | 기존 `diagnose-computer-use-recovery` |
 
 두 스킬의 [배포 검증과 한계](planning-review-validation-20261014.md)를 함께 확인한다. 모든 단계에서 모든 스킬을 읽거나 호출할 필요는 없다.
+
+한 시험의 시간 예산, 단일 PowerShell 스크립트의 호환성, 개별 native 오류 분류는 해당 전문 스킬만으로 검토한다. 단순히 “완료·인계·중단”이라는 단어가 있다고 `review-release-evidence`를 덧붙이지 않는다. 후보별 소스·산출물·시험·승인 관계나 프로젝트의 수용·종료 범위를 추가 판단할 때 선택한다. 미설치·기존 지침·동명 패키지는 [호환성 시험과 적용 기준](../evals/skill-compatibility-20261015/README.md)을 참고한다.
