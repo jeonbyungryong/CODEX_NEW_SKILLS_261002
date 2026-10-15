@@ -1,0 +1,95 @@
+{
+  "source": "Actual standalone CLI app-server skills/list; target-five metadata filtered; private paths replaced with aliases. Not Desktop picker data.",
+  "platformFamily": "windows",
+  "platformOs": "windows",
+  "data": [
+    {
+      "cwd": "NESTED_CWD",
+      "totalSkills": 30,
+      "skills": [
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "ROOT_CWD/.agents/skills/review-release-evidence/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 0
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "NESTED_CWD/.agents/skills/review-release-evidence/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 1
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "ROOT_CWD/.agents/skills/specify-failure-recovery/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 2
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "NESTED_CWD/.agents/skills/specify-failure-recovery/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 3
+        },
+        {
+          "name": "coordinate-device-validation",
+          "description": "Coordinate operator and agent actions for physical-device validation when a timed window, playback/admin screen transition, or reboot makes preparation and evidence depend on each other. Not for unit tests, simple screenshot explanations, or ordinary status reports.",
+          "path": "USER_SKILLS/coordinate-device-validation/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 5
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use when Windows Codex Computer Use repeatedly fails with setup refresh errors, node_repl startup failures, runtime file locks, helper timeouts, FrameArrived capture errors, or missing coordinate geometry.",
+          "path": "USER_SKILLS/diagnose-computer-use-recovery/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 6
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "USER_SKILLS/review-release-evidence/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 18
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "USER_SKILLS/specify-failure-recovery/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 19
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use when preparing or reviewing Windows PowerShell file-validation handoffs, especially JSON manifests, native helpers, Unicode paths or a different author and user shell. Not for browser connection repair or general Git publication.",
+          "path": "USER_SKILLS/verify-powershell-handoff/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 23
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
