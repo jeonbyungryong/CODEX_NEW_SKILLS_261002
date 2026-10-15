@@ -1,0 +1,298 @@
+{
+  "source": "Filtered live skills/list responses, forceReload=true. Non-target skills omitted; absolute personal paths replaced by aliases; catalogIndex retained from original response.",
+  "codexVersion": "0.162.0-alpha.17.2",
+  "platform": "windows",
+  "data": [
+    {
+      "cwd": "BASELINE_CWD",
+      "totalSkills": 26,
+      "skills": [
+        {
+          "name": "coordinate-device-validation",
+          "description": "Coordinate operator and agent actions for physical-device validation when a timed window, playback/admin screen transition, or reboot makes preparation and evidence depend on each other. Not for unit tests, simple screenshot explanations, or ordinary status reports.",
+          "path": "USER_SKILLS\\coordinate-device-validation\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 1
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use when Windows Codex Computer Use repeatedly fails with setup refresh errors, node_repl startup failures, runtime file locks, helper timeouts, FrameArrived capture errors, or missing coordinate geometry.",
+          "path": "USER_SKILLS\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 2
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "USER_SKILLS\\review-release-evidence\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 14
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "USER_SKILLS\\specify-failure-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 15
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use when preparing or reviewing Windows PowerShell file-validation handoffs, especially JSON manifests, native helpers, Unicode paths or a different author and user shell. Not for browser connection repair or general Git publication.",
+          "path": "USER_SKILLS\\verify-powershell-handoff\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 19
+        }
+      ],
+      "errors": []
+    },
+    {
+      "cwd": "ROOT_CWD",
+      "totalSkills": 31,
+      "skills": [
+        {
+          "name": "coordinate-device-validation",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\coordinate-device-validation\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 0
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 1
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\review-release-evidence\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 2
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\specify-failure-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 3
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\verify-powershell-handoff\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 4
+        },
+        {
+          "name": "coordinate-device-validation",
+          "description": "Coordinate operator and agent actions for physical-device validation when a timed window, playback/admin screen transition, or reboot makes preparation and evidence depend on each other. Not for unit tests, simple screenshot explanations, or ordinary status reports.",
+          "path": "USER_SKILLS\\coordinate-device-validation\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 6
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use when Windows Codex Computer Use repeatedly fails with setup refresh errors, node_repl startup failures, runtime file locks, helper timeouts, FrameArrived capture errors, or missing coordinate geometry.",
+          "path": "USER_SKILLS\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 7
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "USER_SKILLS\\review-release-evidence\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 19
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "USER_SKILLS\\specify-failure-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 20
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use when preparing or reviewing Windows PowerShell file-validation handoffs, especially JSON manifests, native helpers, Unicode paths or a different author and user shell. Not for browser connection repair or general Git publication.",
+          "path": "USER_SKILLS\\verify-powershell-handoff\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 24
+        }
+      ],
+      "errors": []
+    },
+    {
+      "cwd": "NESTED_CWD",
+      "totalSkills": 36,
+      "skills": [
+        {
+          "name": "coordinate-device-validation",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\coordinate-device-validation\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 0
+        },
+        {
+          "name": "coordinate-device-validation",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "NESTED_CWD\\.agents\\skills\\coordinate-device-validation\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 1
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 2
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "NESTED_CWD\\.agents\\skills\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 3
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\review-release-evidence\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 4
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "NESTED_CWD\\.agents\\skills\\review-release-evidence\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 5
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\specify-failure-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 6
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "NESTED_CWD\\.agents\\skills\\specify-failure-recovery\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 7
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "ROOT_CWD\\.agents\\skills\\verify-powershell-handoff\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 8
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use only for a read-only SKILL_DISCOVERY_20261015 catalog and selection probe; not for product work.",
+          "path": "NESTED_CWD\\.agents\\skills\\verify-powershell-handoff\\SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 9
+        },
+        {
+          "name": "coordinate-device-validation",
+          "description": "Coordinate operator and agent actions for physical-device validation when a timed window, playback/admin screen transition, or reboot makes preparation and evidence depend on each other. Not for unit tests, simple screenshot explanations, or ordinary status reports.",
+          "path": "USER_SKILLS\\coordinate-device-validation\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 11
+        },
+        {
+          "name": "diagnose-computer-use-recovery",
+          "description": "Use when Windows Codex Computer Use repeatedly fails with setup refresh errors, node_repl startup failures, runtime file locks, helper timeouts, FrameArrived capture errors, or missing coordinate geometry.",
+          "path": "USER_SKILLS\\diagnose-computer-use-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 12
+        },
+        {
+          "name": "review-release-evidence",
+          "description": "Use when reviewing release readiness or project handoffs with mixed test candidates, missing source provenance, repeated inconclusive verification, or accepted operational risks.",
+          "path": "USER_SKILLS\\review-release-evidence\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 24
+        },
+        {
+          "name": "specify-failure-recovery",
+          "description": "Use when drafting or reviewing requirements for failure recovery, reset behavior, last-known-good state, asynchronous completion, or errors whose clearing conditions are unclear.",
+          "path": "USER_SKILLS\\specify-failure-recovery\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 25
+        },
+        {
+          "name": "verify-powershell-handoff",
+          "description": "Use when preparing or reviewing Windows PowerShell file-validation handoffs, especially JSON manifests, native helpers, Unicode paths or a different author and user shell. Not for browser connection repair or general Git publication.",
+          "path": "USER_SKILLS\\verify-powershell-handoff\\SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null,
+          "catalogIndex": 29
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

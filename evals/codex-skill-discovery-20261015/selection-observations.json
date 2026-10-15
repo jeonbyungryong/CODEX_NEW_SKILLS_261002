@@ -1,0 +1,84 @@
+{
+  "source": "Reviewer summary of inspected Codex --json command_execution and final-message events; not a complete raw trace. Absolute paths replaced with catalog.json aliases. Three ephemeral exec turns; the four-name batch is not four independent sessions.",
+  "commonFlags": [
+    "--no-daemon",
+    "-a never",
+    "exec",
+    "--ephemeral",
+    "--json",
+    "--sandbox read-only",
+    "--cd NESTED_CWD"
+  ],
+  "cases": [
+    {
+      "id": "S1",
+      "invocation": "Name-only $review-release-evidence",
+      "fileReads": [
+        {
+          "skill": "review-release-evidence",
+          "path": "NESTED_CWD/.agents/skills/review-release-evidence/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file>",
+          "exitCode": 0,
+          "marker": "NESTED_review-release-evidence"
+        }
+      ],
+      "turnCompleted": true
+    },
+    {
+      "id": "S2",
+      "invocation": "Name-only $specify-failure-recovery, $coordinate-device-validation, $verify-powershell-handoff and $diagnose-computer-use-recovery in one prompt",
+      "fileReads": [
+        {
+          "skill": "specify-failure-recovery",
+          "path": "NESTED_CWD/.agents/skills/specify-failure-recovery/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file>",
+          "exitCode": 0,
+          "marker": "NESTED_specify-failure-recovery"
+        },
+        {
+          "skill": "coordinate-device-validation",
+          "path": "NESTED_CWD/.agents/skills/coordinate-device-validation/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file>",
+          "exitCode": 0,
+          "marker": "NESTED_coordinate-device-validation"
+        },
+        {
+          "skill": "verify-powershell-handoff",
+          "path": "NESTED_CWD/.agents/skills/verify-powershell-handoff/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file>",
+          "exitCode": 0,
+          "marker": "NESTED_verify-powershell-handoff"
+        },
+        {
+          "skill": "diagnose-computer-use-recovery",
+          "path": "NESTED_CWD/.agents/skills/diagnose-computer-use-recovery/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file>",
+          "exitCode": 0,
+          "marker": "NESTED_diagnose-computer-use-recovery"
+        }
+      ],
+      "turnCompleted": true
+    },
+    {
+      "id": "S3",
+      "invocation": "Exact USER_SKILLS/review-release-evidence/SKILL.md path in ordinary prompt text, without a $name mention",
+      "fileReads": [
+        {
+          "skill": "review-release-evidence",
+          "path": "USER_SKILLS/review-release-evidence/SKILL.md",
+          "command": "Get-Content -LiteralPath <selected-file> -Raw",
+          "exitCode": 0,
+          "marker": null,
+          "firstHeading": "# 릴리즈 근거와 종료 판정"
+        }
+      ],
+      "turnCompleted": true
+    }
+  ],
+  "limits": [
+    "Observed file reads, not introspection of hidden initial prompts or deterministic name resolver.",
+    "No structured type=skill/path API input tested.",
+    "No implicit-description selection test.",
+    "No desktop picker click tested."
+  ]
+}

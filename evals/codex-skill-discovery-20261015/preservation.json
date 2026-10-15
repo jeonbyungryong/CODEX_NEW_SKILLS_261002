@@ -1,0 +1,71 @@
+{
+  "source": "SHA-256 of the five installed skill packages (9 files) plus config.toml and the empty user AGENTS.md. Does not cover all PC state.",
+  "files": [
+    {
+      "path": "USER_SKILLS/specify-failure-recovery/SKILL.md",
+      "before": "486607BA543AA995A7BA2D08D6CAC92387161D2E2A6925046171A2ABD84A8CA9",
+      "after": "486607BA543AA995A7BA2D08D6CAC92387161D2E2A6925046171A2ABD84A8CA9",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/review-release-evidence/SKILL.md",
+      "before": "2F980442585BB1CF3A1169FF9BA8DCD20D0762E72A3022114B4176D9BFC29988",
+      "after": "2F980442585BB1CF3A1169FF9BA8DCD20D0762E72A3022114B4176D9BFC29988",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/coordinate-device-validation/SKILL.md",
+      "before": "7AD1A4033351DEEAD4EB9D88AA83EBCA82A3646047E18916624AC10A0F91173B",
+      "after": "7AD1A4033351DEEAD4EB9D88AA83EBCA82A3646047E18916624AC10A0F91173B",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/coordinate-device-validation/references/timing-budget.md",
+      "before": "829FD3ACF773A3A93F162D28AF56FD14346C418928C43CB9CE5A0FDAD59CD8F2",
+      "after": "829FD3ACF773A3A93F162D28AF56FD14346C418928C43CB9CE5A0FDAD59CD8F2",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/verify-powershell-handoff/SKILL.md",
+      "before": "4619EEDF5AA58DF0F80BAA234B650660F076EEC52C9AAA2A6B1E235177A12B93",
+      "after": "4619EEDF5AA58DF0F80BAA234B650660F076EEC52C9AAA2A6B1E235177A12B93",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/diagnose-computer-use-recovery/SKILL.md",
+      "before": "83B8DA217277749EC453E27EB7342D9E8549301C371D1216B21C66C07AA4B9DF",
+      "after": "83B8DA217277749EC453E27EB7342D9E8549301C371D1216B21C66C07AA4B9DF",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/diagnose-computer-use-recovery/references/input-contract.md",
+      "before": "E7D3C39CBE1627FF31EA8D489F415BD0A801EC6F9DEF5AAB04CA1DB153ABE015",
+      "after": "E7D3C39CBE1627FF31EA8D489F415BD0A801EC6F9DEF5AAB04CA1DB153ABE015",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/diagnose-computer-use-recovery/references/recovery.md",
+      "before": "3E7044CBA3C9EF92F73DB177305146DEC0936716468709FCC1F5373AF35E9CC5",
+      "after": "3E7044CBA3C9EF92F73DB177305146DEC0936716468709FCC1F5373AF35E9CC5",
+      "unchanged": true
+    },
+    {
+      "path": "USER_SKILLS/diagnose-computer-use-recovery/scripts/triage.py",
+      "before": "9E9318A412F8A770FBC696168B301DD466EF278833E66D7495C04E82C4ED7961",
+      "after": "9E9318A412F8A770FBC696168B301DD466EF278833E66D7495C04E82C4ED7961",
+      "unchanged": true
+    },
+    {
+      "path": "USER_CODEX/config.toml",
+      "before": "09E3929346DFCDCBF7A0992F07D0308379591A30567E10ED09299A7DA675B5DB",
+      "after": "09E3929346DFCDCBF7A0992F07D0308379591A30567E10ED09299A7DA675B5DB",
+      "unchanged": true
+    },
+    {
+      "path": "USER_CODEX/AGENTS.md",
+      "before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "unchanged": true
+    }
+  ]
+}

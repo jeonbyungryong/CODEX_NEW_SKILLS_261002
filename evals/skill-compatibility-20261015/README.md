@@ -2,6 +2,8 @@
 
 기준일: 2026-10-15. 시작 커밋: `7af28b4d75e8354a54659319ec11928ee1b71fe8`.
 
+후속 [실제 Codex CLI 검색·선택 시험](../codex-skill-discovery-20261015/README.md)에서 동명본 노출과 명시 호출의 실제 읽기 경로를 추가 확인했다. 아래는 당시 문서 시험의 범위로 보존하며 Desktop UI·암묵 선택 등까지 검증 완료로 바꾸지 않는다.
+
 대상은 저장소의 `specify-failure-recovery`, `review-release-evidence`, `coordinate-device-validation`, `verify-powershell-handoff`, `diagnose-computer-use-recovery` 다섯 스킬이다. 처음 세 독립 서브에이전트가 미설치 과제, 기존 지침·동일 이름 충돌, 나머지 세 스킬의 정상 문서 적용을 나눠 수행했다. 발견 수정분은 새 컨텍스트의 두 서브에이전트가 전문 검토와 후보별 인계 검토로 나눠 재시험했다. 앱 설치·제품 개발·실제 기기 조작·프로세스/설정 변경은 금지했으며 하위 에이전트의 추가 위임도 허용하지 않았다.
 
 ## 재현한 상태와 한계
