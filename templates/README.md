@@ -2,6 +2,8 @@
 
 다음 세 파일을 새 프로젝트에 같은 상대 경로로 복사한다. 스킬 저장소의 루트에는 프로젝트용 `AGENTS.md`를 두지 않고, 배포할 템플릿을 `new-project/`에 보관한다.
 
+별도 [Desktop 수동 검증 기록 양식](desktop-skill-check-results.md)은 [수동 안내](../docs/desktop-manual-skill-check.md)에 따라 필요할 때만 임시 시험 repo **밖**으로 복사한다. 위의 프로젝트 기본 세 파일에 추가해 자동 적용하거나 암묵 선택 대화에 첨부하지 않는다.
+
 | 이 저장소의 파일 | 새 프로젝트의 위치 | 역할 |
 | --- | --- | --- |
 | [new-project/AGENTS.md](new-project/AGENTS.md) | `AGENTS.md` | 이번 요청에 필요한 스킬 선택과 최소 검토 기준 |

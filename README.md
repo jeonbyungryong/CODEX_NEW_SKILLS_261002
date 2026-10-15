@@ -8,6 +8,8 @@
 
 새 프로젝트에는 [AGENTS.md와 초기 기획·명세 템플릿](templates/README.md)을 적용할 수 있습니다. 오류·복구 계약이나 후보별 완료 판단이 필요한 요청에서만 두 스킬을 선택하도록 구성했습니다.
 
+현재 PC의 Desktop을 직접 확인하려면 [수동 검증 절차·복사용 요청문](docs/desktop-manual-skill-check.md)과 [빈 결과 기록 양식](templates/desktop-skill-check-results.md)을 사용하세요. 새 임시 프로젝트만 준비하고 선택기 시험과 암묵 선택을 새 대화로 분리합니다. 이 안내의 게시가 Desktop 시험 통과를 뜻하지는 않습니다.
+
 - 2026-10-15 Desktop 후속: 직접 관측 도구 초기화 실패로 Desktop 선택기·암묵 선택은 **미검증**입니다. 임시 프로젝트의 CLI 자연어 요청 두 건은 해당 스킬을 읽었고 산술 음성 대조에는 대상 파일 읽기 이벤트가 없었습니다. 이를 Desktop 통과나 제품 간 동등성으로 합치지 않습니다. [실제 관측·CLI 비교·종료 한계](evals/desktop-skill-boundary-20261015/README.md)를 기록했으며 기존 설치본·템플릿은 변경하지 않았습니다.
 
 - 2026-10-15 실제 Codex 확인: 설치된 CLI의 검색에는 다섯 동명 스킬의 개인·루트·하위본이 함께 나타났습니다. 이번 하위 CWD 명시 호출은 하위본을 읽었고, 개인본 경로 지정 대조는 개인본을 읽었습니다. 목록의 첫 항목을 보장된 선택 우선순위로 해석하지 않습니다. [실측·재현 자료·Desktop UI 등 미검증 범위](evals/codex-skill-discovery-20261015/README.md)를 기록했습니다. 기존 패키지·설정 11개 파일은 해시가 같습니다.
@@ -93,6 +95,8 @@ PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진�
 
 | 문서 | 내용 |
 | --- | --- |
+| [Desktop 수동 확인 안내](docs/desktop-manual-skill-check.md) | 기존 설치본을 보존하는 임시 준비, 선택기·암묵 요청문, 증거 수준과 중단 기준 |
+| [Desktop 결과 기록 양식](templates/desktop-skill-check-results.md) | 미실행 빈 양식. 선택기·칩·본문/경로·CLI 비교·보존·공개 정보 점검 |
 | [Desktop 관측 한계·CLI 암묵 선택 — 10/15](evals/desktop-skill-boundary-20261015/README.md) | UI 초기화 실패, 두 양성·산술 음성의 실제 읽기, CLI와 Desktop을 합칠 수 없는 한계 |
 | [실제 Codex 동명 검색·선택 — 10/15](evals/codex-skill-discovery-20261015/README.md) | CLI의 세 CWD 검색, 이름별 실제 읽기와 개인본 경로 대조, 보존·전송/UI 한계 |
 | [다섯 스킬 호환성 시험 — 10/15](evals/skill-compatibility-20261015/README.md) | 미설치·기존 지침·동명 패키지, 보존 해시, 과잉 선택 보완과 독립 재시험 |
