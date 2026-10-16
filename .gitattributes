@@ -1,0 +1,20 @@
+# Preserve vendored bytes and upstream hashes across Windows/Linux checkouts.
+skills/bambu-labs/** -text
+skills/cad/** -text
+skills/dfam-check/** -text
+skills/dfm/** -text
+skills/dxf/** -text
+skills/engineering-drawing/** -text
+skills/gcode/** -text
+skills/sdf/** -text
+skills/sendcutsend/** -text
+skills/srdf/** -text
+skills/step-parts/** -text
+skills/urdf/** -text
+skills/ponytail*/** -text
+skills/reverse-engineer-anything/** -text
+third_party/** -text
+bundle.json text eol=lf
+scripts/** text eol=lf
+.github/workflows/** text eol=lf
+evals/bundle/** text eol=lf
