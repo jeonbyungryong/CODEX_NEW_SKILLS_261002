@@ -26,7 +26,7 @@
     "ponytail": {
       "repo": "DietrichGebert/ponytail",
       "ref": "main",
-      "commit": "742e0abae1501e12d1254a81d05f16bba10d08c1",
+      "commit": "6f1c2bfff0c837d268929a7c4e490918eb4fab29",
       "license": "MIT",
       "license_sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
       "selected_skills": [
@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "781d5751ad18b25a1fe1ffa8c6035388be8c3283",
+      "commit": "a6c6a76d37c729e17cccf2dd20fe8e8177d98b14",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
