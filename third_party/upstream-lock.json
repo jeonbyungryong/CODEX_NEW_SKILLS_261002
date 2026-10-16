@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "a6c6a76d37c729e17cccf2dd20fe8e8177d98b14",
+      "commit": "4838f444939677107902549c59b73439e14d3ae9",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,11 +117,11 @@
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
     "skills/reverse-engineer-anything/SKILL.md": "976e400f028618926c0b658ee50df79996f5f32402d33b49a23bfdbc232b45e6",
-    "skills/reverse-engineer-anything/references/android-applications.md": "412d9cb462d85b07f6fdbc2453dd741ca3da2c0dbba627867d5624df94afa74c",
+    "skills/reverse-engineer-anything/references/android-applications.md": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "a33760c84ae100f6ffd27d666e515956c5014ac33a6ee2414807833ae666a2b1",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "2bdee98a843d018cf850c706111bb74c459ba8640da00799e9208122e4d5ab80",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "aaa78502a3e95268f6269e75f373908045291fedf6ddd106001555ed06bb2bf6",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "1d2ac5f64feb5ad6ef8b98d803d570e1c48aa588281ff91a4bbf50d40f924450",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "0461f2a50cd4ec9f1b13aa4247c3af91c63d4c60d93d371b94b20ceb9f8fd5d0",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "d9d8d8430e011a6aa7c4c96df8cd78670e85322efc5a189efc2fce6eddb4beed",
