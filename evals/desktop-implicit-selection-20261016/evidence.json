@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Seoul",
+  "sourceCommit": "d993fd97fa8e4e6f87cf3c6619fb570ce0152e2e",
+  "manualCommit": "f68ee13d46b733bcd4cdf8f7609b66c8a195b312",
+  "preflight": {
+    "separateFreshTask": true,
+    "prompt": "읽기 전용으로 이 새 대화의 작업 폴더만 확인해줘. 이 대화가 시작된 작업 디렉터리와 셸의 실제 시작 디렉터리를 구분해줘. 셸을 사용할 수 있으면 workdir을 별도로 지정하거나 Set-Location을 하지 않은 상태에서 Get-Location의 Path를 출력하고 실행 결과를 근거로 적어줘. 원하는 경로로 폴더를 바꾸지 마. 다른 파일 열람·스킬 비교·파일/설정 변경·설치·제품 개발은 하지 마. 실제 실행 근거가 없으면 미확인으로 종료해줘.",
+    "threadCwdAlias": "NESTED",
+    "observedCommand": "(Get-Location).Path",
+    "observedCommandCwdAlias": "NESTED",
+    "observedOutputAlias": "NESTED",
+    "exitCode": 0
+  },
+  "cases": [
+    {
+      "id": "I1",
+      "transport": "codex_app.create_thread; fresh local Codex task; default model/effort not overridden",
+      "prompt": "메모 서비스의 초기 명세를 짧게 보완해줘. 저장 요청의 응답이 유실되거나 저장 중 인증이 만료되어도 사용자 입력을 잃으면 안 돼. 각 상황의 발생·보존·복구·해제 조건과 화면 갱신 사건을 정리해줘. 자동 재시도 횟수와 인증 만료 뒤 편집 허용 정책, 결정 담당자는 아직 미정이야. 제공되지 않은 값을 확정하지 마. 지금은 이 답변에 문서 초안만 작성하고 파일 수정·설치·실행 시험·제품 개발은 하지 마.",
+      "promptMatchesManual": true,
+      "cwdAlias": "NESTED",
+      "cwdEvidence": "read_thread.thread.cwd",
+      "turnCount": 1,
+      "turnStatus": "completed",
+      "observedCommands": [
+        {
+          "operation": "Get-Content -LiteralPath",
+          "pathAlias": "NESTED/.agents/skills/specify-failure-recovery/SKILL.md",
+          "cwdAlias": "NESTED",
+          "status": "completed",
+          "exitCode": 0,
+          "outputTruncated": false,
+          "bodyReceiptObserved": true
+        }
+      ],
+      "finalResponse": "메모 서비스의 초기 명세에 다음 내용을 추가한다.\n\n**공통 보존 원칙**\n\n- 현재 입력, 저장 요청에 포함된 입력 버전, 서버 저장이 확인된 마지막 버전을 구분한다. 최초 저장 전에는 마지막 저장본이 없을 수 있다.\n- 응답 유실·인증 만료·재인증 과정에서 미저장 입력을 삭제하거나 이전 저장본으로 덮어쓰지 않는다. 화면 재진입 시에도 복구할 수 있도록 보존하며, 보존 방식과 수명은 별도 설계한다.\n- ‘저장됨’ 표시는 해당 요청과 입력 버전의 서버 저장이 확인된 경우에만 사용한다. 이후 편집 내용이 있으면 현재 입력은 계속 미저장 상태다.\n\n| 상황 | 발생·영향 | 보존 | 복구 | 해제 조건·화면 갱신 사건 |\n|---|---|---|---|---|\n| 저장 응답 유실 | 저장 요청 후 클라이언트가 결과를 받지 못함. 서버 저장 여부는 **불확정**이며 화면에는 ‘저장 결과 확인 중’을 표시한다. 요청 식별자와 입력 버전을 연결한다. | 요청 당시 입력, 이후 추가 입력, 마지막 확인 저장본을 각각 유지한다. | 해당 요청의 처리 결과를 조회한다. 저장이 확인되면 그 버전에 반영하고, 미저장이 확인되면 재저장 경로를 제공한다. 불확정 상태에서 재전송할 경우 동일 요청의 중복 반영을 방지해야 한다. 자동 재시도 횟수는 미정이다. | 해당 요청의 저장 또는 미저장이 확인되면 불확정 상태를 해제한다. **결과 조회 완료·재저장 결과 수신**을 계기로 화면을 갱신한다. 시간 경과만으로 성공 처리하지 않는다. |\n| 저장 중 인증 만료 | 인증 오류 응답 또는 세션 만료 사건을 감지하면 ‘재인증 필요’를 표시한다. 저장 거부가 확인된 경우와, 만료 감지만으로 저장 결과를 알 수 없는 경우를 구분한다. | 재인증 화면으로 이동하거나 재인증에 실패해도 현재 입력과 요청 버전을 유지한다. | 재인증 후 동일 계정과 해당 메모의 접근 권한을 확인한다. 기존 요청 결과가 불확정이면 먼저 확인하고, 미저장 입력은 재저장으로 이어간다. 인증이 필요한 재시도는 유효한 인증을 확보할 때까지 중단한다. | **재인증 성공 및 권한 확인 완료** 시 인증 오류를 해제한다. 저장 오류는 별도로 저장 결과가 확인되어야 해제한다. **인증 결과·권한 확인 결과·저장 결과 수신**마다 화면을 갱신한다. 편집 가능 여부는 미정 정책에 따른다. |\n\n늦게 도착한 응답은 요청 식별자·입력 버전·현재 계정 및 권한·화면의 유효성을 확인한 뒤 반영한다. 이전 요청의 성공이 최신 입력을 덮어쓰거나 최신 입력까지 ‘저장됨’으로 표시해서는 안 된다. 오류 해제와 화면 갱신이 비활성 버튼 클릭에 의존해서도 안 된다.\n\n**미정 사항**\n\n| 항목 | 결정 담당자 | 결정 시점 | 결정 전 가능한 범위 |\n|---|---|---|---|\n| 자동 재시도 횟수·간격·최종 중단 조건 | 미정 — 담당 역할 지정 필요 | 재시도 정책 확정 단계, 날짜 미정 | 결과 확인·입력 보존·중복 방지 조건 명세 |\n| 인증 만료 후 편집 허용 여부와 재개 조건 | 미정 — 담당 역할 지정 필요 | 인증·편집 흐름 확정 단계, 날짜 미정 | 입력 보존·재인증·저장 상태 분리 명세 |\n\n문서상 검증 시나리오는 ‘실패 유발 → 입력과 저장본 보존 확인 → 결과 확인 또는 재인증 → 오류 해제와 화면 갱신 확인’으로 작성한다. 응답 유실 전후의 실제 저장 여부, 추가 편집, 늦은 응답, 재인증 실패를 포함한다. 이는 실행 시험 허가를 의미하지 않는다.\n\nREAD_RECEIPT_NESTED_specify-failure-recovery",
+      "finalReceipt": "READ_RECEIPT_NESTED_specify-failure-recovery",
+      "evidenceLevel": "PATH_READ_OBSERVED + BODY_OBSERVED",
+      "selectionOutcome": "expected target's NESTED copy read in this sample",
+      "followupPromptsSent": 0
+    },
+    {
+      "id": "I2",
+      "transport": "codex_app.create_thread; fresh local Codex task; default model/effort not overridden",
+      "prompt": "프로젝트 인계 근거가 후보 A와 B로 섞여 있어. A는 실사용 시험 PASS, B는 모의 시험 PASS이고 사용자는 B의 실사용 미검증 위험을 수용해 제한 시범 운영 인계를 승인했어. 정확한 B 버전과 실제 전달·배포 증거는 아직 없어. 현재 완료로 말할 수 있는 범위와 남길 기록을 8문장 이내로 판단해줘. 새 기능이나 오류 복구 계약을 만드는 요청은 아니야. 문서 답변만 하고 파일 수정·설치·시험·전달·배포는 하지 마.",
+      "promptMatchesManual": true,
+      "cwdAlias": "NESTED",
+      "cwdEvidence": "read_thread.thread.cwd",
+      "turnCount": 1,
+      "turnStatus": "completed",
+      "observedCommands": [
+        {
+          "operation": "Get-Content -LiteralPath",
+          "pathAlias": "NESTED/.agents/skills/review-release-evidence/SKILL.md",
+          "cwdAlias": "NESTED",
+          "status": "completed",
+          "exitCode": 0,
+          "outputTruncated": false,
+          "bodyReceiptObserved": true
+        }
+      ],
+      "finalResponse": "현재 완료로 말할 수 있는 범위는 **B의 실사용 미검증 위험을 수용한 제한 시범 운영 인계 승인·의사결정 완료**입니다.\n정확한 B 버전과 실제 전달·배포 증거가 없으므로 인계 실행 완료나 배포 완료로 판정할 수는 없습니다.\nA의 실사용 시험 PASS와 B의 모의 시험 PASS는 분리해 기록하고, A의 결과를 B의 실사용 검증 근거로 사용하지 않습니다.\nB의 실사용 상태는 **미검증**, 사용자의 위험 수용은 **승인된 운영 범위 내 수용된 제한**으로 함께 남깁니다.\n승인자·승인일·승인 원문 위치·운영 범위와 제한, 각 후보의 시험 환경·결과·근거 위치를 기록해야 합니다.\n정확한 B 버전 식별과 시험 대상과의 동일성, 실제 전달·배포 여부는 증거 공백으로 명시하고 후속 확인 담당자·확인 시점·실행 권한을 남기되, 이미 수용된 실사용 미검증을 이유로 승인을 자동 재개하지 않습니다.\n\nREAD_RECEIPT_NESTED_review-release-evidence",
+      "finalReceipt": "READ_RECEIPT_NESTED_review-release-evidence",
+      "evidenceLevel": "PATH_READ_OBSERVED + BODY_OBSERVED",
+      "selectionOutcome": "expected target's NESTED copy read in this sample",
+      "followupPromptsSent": 0
+    },
+    {
+      "id": "I0",
+      "transport": "codex_app.create_thread; fresh local Codex task; default model/effort not overridden",
+      "prompt": "9 더하기 7은 얼마야? 답은 숫자 하나만 적어줘.",
+      "promptMatchesManual": true,
+      "cwdAlias": "NESTED",
+      "cwdEvidence": "read_thread.thread.cwd",
+      "turnCount": 1,
+      "turnStatus": "completed",
+      "observedCommands": [],
+      "finalResponse": "16",
+      "finalReceipt": null,
+      "evidenceLevel": "ANSWER_OBSERVED; NO_COMMAND_EVENT_IN_RETURNED_FIRST_TURN",
+      "selectionOutcome": "16 only; no observed skill-file read; hidden injection not ruled out",
+      "followupPromptsSent": 0
+    }
+  ],
+  "preservation": {
+    "existingSkillAndUserFiles": 11,
+    "temporaryPackageFiles": 18,
+    "matchedBeforeAfter": 29,
+    "changed": 0,
+    "preparationBaselineDifference": "User config.toml already differed from 2026-10-15 baseline; no content inspection/restoration."
+  },
+  "scope": {
+    "pickerTests": "NOT_RUN / UNVERIFIED",
+    "optionalI3I4I5": "NOT_RUN",
+    "fixedPriority": "UNVERIFIED",
+    "hiddenInstructionInjection": "UNVERIFIED",
+    "modelAndReasoningActualValues": "NOT_EXPOSED_BY_USED_METADATA",
+    "appInstall": false,
+    "environmentRecovery": false,
+    "productDevelopment": false,
+    "existingSettingsEdited": false
+  }
+}
