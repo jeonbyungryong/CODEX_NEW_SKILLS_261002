@@ -153,8 +153,10 @@ UI가 동명을 합쳐 보이거나 경로를 숨기더라도 가까운 본이�
 
 ### I4 — 수신 PowerShell 인계
 
+2026-10-16 I4-R1: 지침 열람용 읽기 전용 셸 명령과 검토 대상 코드 실행을 분리했다. 이전 원문·결과는 [최초 I4 근거](../evals/desktop-implicit-selection-20261016/extended-evidence.json)에 그대로 보존한다. 이 문구를 바꿔도 기존 I4 판정이 소급 변경되지는 않는다.
+
 ```text
-검증 인계 문서만 검토해줘. 작성자는 PowerShell 7에서만 성공했고 수신자는 Windows PowerShell 5.1이야. JSON 루트 배열은 3건이고 현재 코드는 @(Get-Content file.json | ConvertFrom-Json)이야. Count·항목 타입·필드 검증은 없어. 현재 준비 상태와 필요한 최소 확인을 문서로만 정리해줘. PowerShell 코드 실행·helper 실행·환경 업그레이드·설치는 하지 마.
+검증 인계 문서만 검토해줘. 작성자는 PowerShell 7에서만 성공했고 수신자는 Windows PowerShell 5.1이야. JSON 루트 배열은 3건이고 현재 코드는 @(Get-Content file.json | ConvertFrom-Json)이야. Count·항목 타입·필드 검증은 없어. 현재 준비 상태와 필요한 최소 확인을 문서로만 정리해줘. 지침 문서의 읽기 전용 열람과 그 열람에 필요한 읽기 전용 셸 명령만 허용해. 검토 대상 PowerShell 코드·검증 스크립트·helper 실행, 파일·설정 변경, 환경 업그레이드·설치는 하지 마.
 ```
 
 ### I5 — native 오류 경계
