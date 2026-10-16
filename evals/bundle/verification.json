@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-16",
+  "catalog_packages": 24,
+  "imported_and_notice_files": 113,
+  "committed_hash_mismatches": 0,
+  "local_package_tests": {"passed": 15, "failed": 0},
+  "existing_regression_tests": {"passed": 18, "failed": 0},
+  "hosted_os": ["ubuntu-latest", "windows-latest"],
+  "hosted_yaml_packages": 24,
+  "pr_validation_run": "https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002/actions/runs/38849770062",
+  "manual_sync_run": "https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002/actions/runs/38849909810",
+  "manual_sync_result": "success_no_new_upstream_commits",
+  "protected_local_files": {"before": 118, "after": 118, "changed": 0, "added": 0},
+  "repository_security_settings_changed": false,
+  "runtime_mcp_or_existing_skill_installation_performed": false,
+  "not_proven": ["future_changed_upstream_publication_in_hosted_run", "all_skill_behavior_or_performance", "CAD_or_REA_runtime_readiness", "all_PC_files_unchanged"]
+}

@@ -19,6 +19,10 @@ No CAD/REA runtime, MCP registration, browser/printing/manufacturing action, npm
 
 The workflow runs the 15 package tests, the existing 18 tests, package/lock validation and YAML parsing on both Ubuntu and Windows. The hourly/manual updater validates again before publishing an automation branch. GitHub run results, not the presence of this workflow file, establish actual hosted execution.
 
+Hosted verification was subsequently completed: [PR validation run](https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002/actions/runs/38849770062) passed on both Windows and Ubuntu before [PR #1](https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002/pull/1) merged. The [manual workflow_dispatch run](https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002/actions/runs/38849909810) then passed both OS jobs and the sync job, including 24 YAML frontmatters/unique identities. The real network sync found no new upstream commits and wrote no package changes. Publication of a future changed-upstream branch/PR was therefore not exercised by that no-change run; changed-package staging and rejection paths were covered by the controlled update tests.
+
+The committed Git bytes of all 113 imported/notice files matched the provenance hashes (zero mismatches). Before/after snapshots of the author's existing personal skill files and Codex config covered **118 files before and after, zero changed and zero added** in that protected set. This is not a claim that all PC caches/logs are unchanged. Existing Actions default permissions remained `read`, with workflow PR creation/approval still disabled. [Machine-readable result](verification.json)
+
 The repository's existing Actions policy does not allow workflow-created/approved PRs. It is not silently changed. When that policy blocks PR creation, the update branch and compare link remain available for manual review; no upstream update is automatically merged into main or installed on PCs.
 
 ## Limits
