@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "376eeca770820b31f7f8d4c5fcc397315621643e",
+      "commit": "3ddb2e4cf7c5678e2fd2c4ef2471e5f795e9355d",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -167,7 +167,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "b542f2b6747c1c59aab041891b0451b2d2d171f81c3fd3dc2c14f5ed8c91d4cf",
+    "third_party/rea/README.md": "d138aa55fb20e2d7fa63a0e4f811b93a0c451db604c167e0b0c3a8e6fd9eea11",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "f4ea7d62c5a8c078fa1937ee6143ea16ae974c132b178f7c989fbf970f51a4ec"
   },
