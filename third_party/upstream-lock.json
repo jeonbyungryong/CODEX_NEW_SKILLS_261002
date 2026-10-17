@@ -42,13 +42,14 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "be0b2d138c46bb951fc3c8ee57ef7b0d57fed312",
+      "commit": "5120eb44127c4a3d460b1d264307b523d28cf850",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
         "reverse-engineer-anything"
       ],
       "unselected_skills": [
+        "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
         "rea-tool-design"
@@ -121,7 +122,7 @@
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "a33760c84ae100f6ffd27d666e515956c5014ac33a6ee2414807833ae666a2b1",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "2bdee98a843d018cf850c706111bb74c459ba8640da00799e9208122e4d5ab80",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "aaa78502a3e95268f6269e75f373908045291fedf6ddd106001555ed06bb2bf6",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "0461f2a50cd4ec9f1b13aa4247c3af91c63d4c60d93d371b94b20ceb9f8fd5d0",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "18b8828aec6476be03ca92bdb9506c47cc9ef8c1415c37d33e4af2f8c55cf8f9",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "d9d8d8430e011a6aa7c4c96df8cd78670e85322efc5a189efc2fce6eddb4beed",
