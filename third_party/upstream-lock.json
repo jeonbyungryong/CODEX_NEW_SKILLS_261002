@@ -4,7 +4,7 @@
     "text-to-cad": {
       "repo": "earthtojake/text-to-cad",
       "ref": "latest",
-      "commit": "b566b6731fcf5b5316be73211c1542095c423afe",
+      "commit": "a08ff0e0bfa2dbe40d4d8ba2655baa054f4f8bc6",
       "license": "MIT",
       "license_sha256": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
       "selected_skills": [
@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "36d156ff05f48f9f0b4c4abb8f7c899249a49ebf",
+      "commit": "32f0e5120966be59d17a1e092353816c76a9c5e2",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -61,7 +61,7 @@
     "skills/bambu-labs/SKILL.md": "509352748a5f23b6fc9d3cd255758ef3052a0524979c8061ae20dd5270bb0cee",
     "skills/bambu-labs/agents/openai.yaml": "5bedbabb41a863d663ee142c616eb39589fc90ecccae4877b28af0beb2c87d28",
     "skills/cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/cad/SKILL.md": "f96c4553735a77b447fc899dd1f169846db873e57ae5a30e0388774ebc9b0039",
+    "skills/cad/SKILL.md": "6adf9ae6ea9a27ba9c767a3c2b76934b7486d58287f72ea4e97bde0b5f2138bb",
     "skills/cad/agents/openai.yaml": "56137e1549cfec4b5027cf81ecd77433539a75862a5d0047395082a78783185d",
     "skills/cad/references/animation-deformation.md": "2eb57c7aef6275f6f2439d9f5c57c90decee6d6030fe3837a4f529f8e37ddd9c",
     "skills/cad/references/build123d-modeling.md": "0e32f3a8c8da993f2c04a50e13ffe4476a74a684ed3d6ce4c54233b1bb3a1d8d",
@@ -91,11 +91,11 @@
     "skills/dfm/requirements.txt": "ce2327328d1e961585a8cffb8ee3b9f543354a92b7dfa8bff3c9706132ae3f22",
     "skills/dfm/scripts/mold_tool.py": "d332a5fea83a2e7b246ecd6759050943bbae9e7a58f31bd4d5b04f45ed35e4cd",
     "skills/dxf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/dxf/SKILL.md": "43519654fd14992bee7d80ed06a97846aac754c622572968b10edafdd4aef1c3",
+    "skills/dxf/SKILL.md": "af3e5c26295a8b578da08b79d797b2a2ec52ffc7e44599743ac3a10e4b86d096",
     "skills/dxf/agents/openai.yaml": "4238a2001fd1892bddbad98f3ff2c9c241d91bf442b86af954168f3f73894ef1",
     "skills/dxf/references/generator-templates.md": "94a4aa4ba9cb6ace78950b3db61377c339576f279563f45a498ad0a9c71dfc11",
     "skills/engineering-drawing/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/engineering-drawing/SKILL.md": "57e137bfdf618e0a9bb6b608d0a11c4323eb0bb5d4c6bb0c6e0aace5329c5403",
+    "skills/engineering-drawing/SKILL.md": "f9747dbac498a48c148080b518f23372f15ebaf05deda5c52af8bcc09fe0299b",
     "skills/engineering-drawing/agents/openai.yaml": "67ca4aa8737ebd56a40c7cc6453a3e1ac72c5f88817401c81171e1acd370789f",
     "skills/engineering-drawing/references/sheet-api.md": "4aa751e5084e549f751ffe0c856c56e2a931aae35114358f334b8d2067b5b53b",
     "skills/gcode/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
@@ -125,7 +125,7 @@
     "skills/reverse-engineer-anything/references/native-and-artifacts.md": "18b8828aec6476be03ca92bdb9506c47cc9ef8c1415c37d33e4af2f8c55cf8f9",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/sdf/SKILL.md": "353aa64fb81e801db89de1e7e36f4f5707838a58316a1b14f07a2493c6ce3ac7",
+    "skills/sdf/SKILL.md": "697c135683b22357a6f7fcbfa9973b11b490542c04a1e3f5354244ff5dbd3e52",
     "skills/sdf/agents/openai.yaml": "a84b827e9a7349d2a0190ad75d0b3b1a252eac2e592c078e9af1ff8cc0e97837",
     "skills/sdf/references/design-ledger.md": "7525480718262f98425546da7750bbf895429ec820570295629c2a641c6fb52d",
     "skills/sdf/references/examples.md": "79e5169e68f98f2938ec21be115e5ff9152cefaf6e479398b2a6323101550b2d",
@@ -141,7 +141,7 @@
     "skills/sendcutsend/references/official-sources.md": "87ea5c0278b1fbacd81b9bfedc1aa0dd6aa45b0a9d5e22043ae39aef707ffdf2",
     "skills/sendcutsend/references/report-template.md": "fd9b6342db4c15b3377e3d3649cc27a109e71232c691f4054fc0c2a351ea56c9",
     "skills/srdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/srdf/SKILL.md": "cba40fe87777d2b7052c42cd73e6eece5e6c9ff67ed9342c9a1595808c6ca623",
+    "skills/srdf/SKILL.md": "2d3b73f9a6b5ef21093d79f6d05373f38611f7756f5a7f06085b62094aae8176",
     "skills/srdf/agents/openai.yaml": "01e16fc71fdd44926707480b85b9582f5f2b1eb90ee4b102ec2a077da6ccf070",
     "skills/srdf/references/authoring-contract.md": "c1a8f48bc3dbec5d04623ec38107708e43a9af3c1b6fd071981e5453490c5271",
     "skills/srdf/references/disabled-collisions.md": "941a9ff5f01a389ce49abed3d3c1ac56be4c519223d11e7f351147b36f97130c",
@@ -155,7 +155,7 @@
     "skills/step-parts/references/step-parts-api.md": "dc5beb2326f9b1ceb331412da5adf38f22e485cf4f5d47f6419ef1254c4cf461",
     "skills/step-parts/scripts/download_step_part.py": "5a3b167e8018282873d442d56052ac0458158d71be38ebd43a674113ef8adcba",
     "skills/urdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "skills/urdf/SKILL.md": "f01f51a4b2364a3183d793cc173f5111ff9a8d27609cf73bdec25bc3ff7e393d",
+    "skills/urdf/SKILL.md": "2ccd945b2ab7a086fd93b6b805f4663b105657b2ca651fef62eca26bfd445565",
     "skills/urdf/agents/openai.yaml": "9d8c2868ff79bd7d0880ec4cd16e6f74f8e3d97847b29745b8a527a9c971174e",
     "skills/urdf/references/authoring-contract.md": "89c5b9587a959661e09cfef0462f9e9049945956da6334203ece950985313ad0",
     "skills/urdf/references/design-ledger.md": "c60b9a49dc8c967a2f652bb08fa248bdcdb9877cb788706491e847da8bb82a97",
@@ -169,7 +169,7 @@
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
     "third_party/rea/README.md": "75ca44765dfa3d5bce1dfba3c9ddad35fca29f8e8fbc8cae60b4d9078e43e211",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
-    "third_party/text-to-cad/README.md": "4fa7e52a7e920c1648773015eaa45c868665b34ef632b3453b46f7ddb2b21b40"
+    "third_party/text-to-cad/README.md": "91b26b87d30ffac844734b5f768d997d69c70a7f5ed3be582e7f40961545e192"
   },
   "origins": {
     "skills/bambu-labs/LICENSE": {
