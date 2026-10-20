@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "1629266e3c08c90fed6bba5383528af7986a12b7",
+      "commit": "949966712e68d8857a50a165ecddf04c2d7e6d3b",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,12 +117,12 @@
     "skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "skills/reverse-engineer-anything/SKILL.md": "641a710312ca66e99d3ca5e837793e40cad4619a2c2066f71f44f5e8442b1fb8",
+    "skills/reverse-engineer-anything/SKILL.md": "36ed6adfae54029c8d8610d22140cce5d91f6f418f2423eeb63bcda896c6d1fe",
     "skills/reverse-engineer-anything/references/android-applications.md": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "cf25b8774810cc24dc188a7a351d2d948c5d07027dab7c34868522225d240ee0",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "e67a4d96efa266977d8959b15d3e95d468bfccffb8754e8108d809d2275328fe",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "b78af72ffac3471f8ccbd060556c9eb268d78dbfc04ca9604ad15190369464a8",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "86a5bbac6a3ca3febe941010021f0f9b275e8a7c38f1600010e569c458485213",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "01b8f740f8aa4ae95aa3241b2fd2164a78f4a7e374de5fb4ea52cb699367fdb8",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "da6728e31648a47444d3282fdb3fd17eaab38c0715ac987b6d410c0473ec8036",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
