@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "833136507dd79d959340b09862a53af344e4f1b3",
+      "commit": "d148ce090512aceeddd8c907f03f9dd5d7cf47c8",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -120,9 +120,9 @@
     "skills/reverse-engineer-anything/SKILL.md": "d5cfab9013553c278307013f91cea9447e5641817c0d69bc936255e18f60a7a2",
     "skills/reverse-engineer-anything/references/android-applications.md": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "a33760c84ae100f6ffd27d666e515956c5014ac33a6ee2414807833ae666a2b1",
-    "skills/reverse-engineer-anything/references/evidence-workflows.md": "f04a4e0ce7627851a40b0eccf9367bcb1446631017bc733febcee69997d59245",
+    "skills/reverse-engineer-anything/references/evidence-workflows.md": "6eca529046e051c1769d0c9191a3cacf5bd06042b15afbd02941803443c339c4",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "aaa78502a3e95268f6269e75f373908045291fedf6ddd106001555ed06bb2bf6",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "ce58fa841190f3740ce12f2c28d975a3ab26d66a065f03e5202d058d099c5899",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "24b35828ee874e62d53f10c4f22d8c6a1f87bb2cf8adcb2b1081731dd2d4b5db",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "697c135683b22357a6f7fcbfa9973b11b490542c04a1e3f5354244ff5dbd3e52",
@@ -167,7 +167,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "b35b15ac92987d7da6c35b921433da4d0b0f6f0a6b4b42ebf0472782cabbfec7",
+    "third_party/rea/README.md": "d029cf23572c336a965f79d4cfe54d65a87abbbc9047815b97d869a20ac9d249",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "91b26b87d30ffac844734b5f768d997d69c70a7f5ed3be582e7f40961545e192"
   },
