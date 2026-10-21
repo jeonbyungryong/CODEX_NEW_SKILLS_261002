@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "6d356b84344659085f2b912857b5e27fe0160c9b",
+      "commit": "01788bac863ac786bfbb648cad69b11e23b40a89",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -118,7 +118,7 @@
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
     "skills/reverse-engineer-anything/SKILL.md": "6368f7440023d2285f7878836d2ce92bcf6d2f7c0f37c8d3bf4febf9cd014e36",
-    "skills/reverse-engineer-anything/references/android-applications.md": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732",
+    "skills/reverse-engineer-anything/references/android-applications.md": "ae78da20a572e92a1d5fac3f9fdf10caa7ed09fe0b6c9132b4e878470c28f9c0",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "cf25b8774810cc24dc188a7a351d2d948c5d07027dab7c34868522225d240ee0",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "e67a4d96efa266977d8959b15d3e95d468bfccffb8754e8108d809d2275328fe",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "b78af72ffac3471f8ccbd060556c9eb268d78dbfc04ca9604ad15190369464a8",
@@ -167,7 +167,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "bc3a18fd299ee311616b2aef3b80166f4295163e7af1bff02445e1e23c24ac53",
+    "third_party/rea/README.md": "840ed30f63738875ab8909840963e765fca6ea6e13f87fdc32c10c4bfc487cd2",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "49f0a4a0d336ecac8865fd3f26e3ae8e4997a6545aef7f9f2a914e705f8def8c"
   },
