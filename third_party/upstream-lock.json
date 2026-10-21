@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "d0067ba34a39ea47dd7e11bb2e6169bc0938cc3f",
+      "commit": "a5f982de8dbe4b092cc20ab89d492b7e7028b758",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,7 +117,7 @@
     "skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "skills/reverse-engineer-anything/SKILL.md": "36ed6adfae54029c8d8610d22140cce5d91f6f418f2423eeb63bcda896c6d1fe",
+    "skills/reverse-engineer-anything/SKILL.md": "3360eb9a491d4d0451d111f877300eddb8935c7cbd667078b643934eba691b06",
     "skills/reverse-engineer-anything/references/android-applications.md": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "cf25b8774810cc24dc188a7a351d2d948c5d07027dab7c34868522225d240ee0",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "e67a4d96efa266977d8959b15d3e95d468bfccffb8754e8108d809d2275328fe",
@@ -167,7 +167,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "875be13c15e345c26cd59e00f224f8296bc2c506b8613e4c7a2212ced0830cf2",
+    "third_party/rea/README.md": "c0b24f921034e4bfc04c7008a41fe4540638942fd406189aa4e8d1a881374acc",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "49f0a4a0d336ecac8865fd3f26e3ae8e4997a6545aef7f9f2a914e705f8def8c"
   },
