@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "f1dc595272751774434ff88e8daadc641074c107",
+      "commit": "d87e73f2db50be72d33a4b3c7199af35518b441c",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,12 +117,12 @@
     "skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "skills/reverse-engineer-anything/SKILL.md": "3e56a90ff3e7b390d1242ddf796a2be8e745c7688917ca13638302bd1e71fefd",
+    "skills/reverse-engineer-anything/SKILL.md": "3e5b6045dec6b7e0658f28476a5cd3238432ac68ff848243ffd43d9cad2d2a15",
     "skills/reverse-engineer-anything/references/android-applications.md": "ae66f8c26098fed21acf97ca2faeb6bd3c03fcdd7c6bac66323f8c45fd985095",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "ce2d122b873fb84d98cdb56afd84a34ee8de362b65760855838dfb29c2282e50",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "c9595c275aa7a55953e4977be5e1ba5c39afffc83342e1a4762c61d2a01a0e49",
-    "skills/reverse-engineer-anything/references/javascript-applications.md": "9003206fb2bb70d0db65c6cb49d3e62b7a4e46d8697100b683d11e9a4e9b0dbd",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "a7a4921afbb4fdca127e6dd274ccb9508d51022766fd26e1b3f7b812e7422501",
+    "skills/reverse-engineer-anything/references/javascript-applications.md": "d488f245da4de0d35f6e9ad7521aa94dee37c272622c897ad7c3ccdd33f8baeb",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "b1fcddcd015387094b426549fe4b9b51a8ebf021b5ae084b9113fd74c9f91e8e",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "852bd1e25e9f83f0e8c7d4f8441a043e2b2a7d5e39f729bf22ac77259a0207bd",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
@@ -167,7 +167,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "ca167be1513bae6a72a1a477ec793f8eddabd1b5ca4611a7583c4d5c72beb318",
+    "third_party/rea/README.md": "c733aadf7a49f67c7cab66abac4b7feecdd5da24dd4403e42ff517e33cdeb706",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "49f0a4a0d336ecac8865fd3f26e3ae8e4997a6545aef7f9f2a914e705f8def8c"
   },
