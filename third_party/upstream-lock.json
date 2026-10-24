@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "9895f1870c5537e64f08e9ff145a0917696b7a50",
+      "commit": "de088fcec661a215df76e234c5375c952e2f5c58",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,12 +117,13 @@
     "skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "skills/reverse-engineer-anything/SKILL.md": "883d7e599d5d578899f80fe2e2a84c098fc662f7bbbede7eca501d9bb1558fe8",
+    "skills/reverse-engineer-anything/SKILL.md": "cd1c88354472f75800c6fd25fd575b3c230ae909f75920885671418fc7ce18b4",
     "skills/reverse-engineer-anything/references/android-applications.md": "ae66f8c26098fed21acf97ca2faeb6bd3c03fcdd7c6bac66323f8c45fd985095",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "ce2d122b873fb84d98cdb56afd84a34ee8de362b65760855838dfb29c2282e50",
-    "skills/reverse-engineer-anything/references/evidence-workflows.md": "c9595c275aa7a55953e4977be5e1ba5c39afffc83342e1a4762c61d2a01a0e49",
+    "skills/reverse-engineer-anything/references/environments.md": "8aba206c3160ee2fcfb9b8f8aff2ef2c0fa6ab7abc507071d910d62edf8804a7",
+    "skills/reverse-engineer-anything/references/evidence-workflows.md": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "d488f245da4de0d35f6e9ad7521aa94dee37c272622c897ad7c3ccdd33f8baeb",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "8f3f525ffdcc68c2ff6168e00ad0da1ed0fc1ca94b9268ca62fad8b50a87f0ff",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "063483ee509e5b5a855482c118e10653e56f23bf37c1c5dc040d514009522312",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "852bd1e25e9f83f0e8c7d4f8441a043e2b2a7d5e39f729bf22ac77259a0207bd",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
@@ -423,6 +424,10 @@
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": {
       "source": "rea",
       "path": ".agents/skills/reverse-engineer-anything/references/connection-and-recovery.md"
+    },
+    "skills/reverse-engineer-anything/references/environments.md": {
+      "source": "rea",
+      "path": ".agents/skills/reverse-engineer-anything/references/environments.md"
     },
     "skills/reverse-engineer-anything/references/evidence-workflows.md": {
       "source": "rea",
