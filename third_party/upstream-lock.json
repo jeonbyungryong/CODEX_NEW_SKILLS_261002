@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "0a2b7af905a226540fbad637c60fe79b15a24549",
+      "commit": "fc43e285eaae2155d32e2ca0ab5d2181a4e2f1b5",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -124,7 +124,7 @@
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "619cfd15ffdf466452cc32002ae357fefec59d5dcad4c9dfc27630138f0f719d",
     "skills/reverse-engineer-anything/references/native-and-artifacts.md": "cf394568ae91e9017d63056adb8872fb1df9e2f6bbe544a95d0fd9f064b06dd5",
-    "skills/reverse-engineer-anything/references/runtime-observation.md": "852bd1e25e9f83f0e8c7d4f8441a043e2b2a7d5e39f729bf22ac77259a0207bd",
+    "skills/reverse-engineer-anything/references/runtime-observation.md": "e207a912470a1a56dc02316eb7b040ac50b4d763f2273e97a6811863d9051d74",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
     "skills/sdf/agents/openai.yaml": "a84b827e9a7349d2a0190ad75d0b3b1a252eac2e592c078e9af1ff8cc0e97837",
