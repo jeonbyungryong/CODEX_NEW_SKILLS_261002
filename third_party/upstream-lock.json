@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "447907f2808877d3a7de62c382e256f55d08e5ac",
+      "commit": "1173c0a9dc1b352a60943a491462294db8f353ae",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -123,7 +123,7 @@
     "skills/reverse-engineer-anything/references/environments.md": "83e041f0a5243172af69eaadf62da0699617add3ff1d46b294e4bba7ece9d95f",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57",
     "skills/reverse-engineer-anything/references/javascript-applications.md": "619cfd15ffdf466452cc32002ae357fefec59d5dcad4c9dfc27630138f0f719d",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "4aac01acf77cabdc8320a5eeb5825a40640d816a14eb0a1024d1557683f8adf3",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "966c118218e6bca0de486008cb2142f70a27051541ac3e05aac8f0902a4c2bdc",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "e207a912470a1a56dc02316eb7b040ac50b4d763f2273e97a6811863d9051d74",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
@@ -168,7 +168,7 @@
     "third_party/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "third_party/ponytail/README.md": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
     "third_party/rea/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "third_party/rea/README.md": "363722e6579c518fd841e4a2dbe147c1e88343a3a18a8fe6e91f8f3e059a8e35",
+    "third_party/rea/README.md": "4345ac9399af93fd50e916e01e40f8b364782374198dcb042218106d60c02c5c",
     "third_party/text-to-cad/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "third_party/text-to-cad/README.md": "49f0a4a0d336ecac8865fd3f26e3ae8e4997a6545aef7f9f2a914e705f8def8c"
   },
