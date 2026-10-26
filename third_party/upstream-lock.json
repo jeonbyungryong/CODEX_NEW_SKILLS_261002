@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "615fbbbdd750de2df5d92b9827d0c7c4422c1d03",
+      "commit": "25a08ed6393464744bd70750cdcba66d81943618",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -117,7 +117,7 @@
     "skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
     "skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
     "skills/reverse-engineer-anything/LICENSE": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
-    "skills/reverse-engineer-anything/SKILL.md": "8866a9102de4ca5d6110e280a5d53fa67f0600d26b75cfaff4e9b252af631bcf",
+    "skills/reverse-engineer-anything/SKILL.md": "8d05d858a1a957c734d6184278d92430718a04cc6d815e5a756499bc5059e72f",
     "skills/reverse-engineer-anything/references/android-applications.md": "24ecaa1798eb4f28591884a7deb68df31e90313865515a23e3b466403f1abc39",
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "3c2049047f2e9c01a224d71c1b54fbf429a98cdf8e691e9058d67ec4bc1df616",
     "skills/reverse-engineer-anything/references/environments.md": "83e041f0a5243172af69eaadf62da0699617add3ff1d46b294e4bba7ece9d95f",
