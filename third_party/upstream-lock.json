@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "1173c0a9dc1b352a60943a491462294db8f353ae",
+      "commit": "ba7ac7908db2c2a8e05b75df032cb175ab069669",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
