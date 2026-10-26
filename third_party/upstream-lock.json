@@ -42,7 +42,7 @@
     "rea": {
       "repo": "morluto/rea",
       "ref": "main",
-      "commit": "4557791a2e0b77ff08afbb886b9cd3a92b6e1aef",
+      "commit": "615fbbbdd750de2df5d92b9827d0c7c4422c1d03",
       "license": "MIT",
       "license_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "selected_skills": [
@@ -122,8 +122,8 @@
     "skills/reverse-engineer-anything/references/connection-and-recovery.md": "3c2049047f2e9c01a224d71c1b54fbf429a98cdf8e691e9058d67ec4bc1df616",
     "skills/reverse-engineer-anything/references/environments.md": "83e041f0a5243172af69eaadf62da0699617add3ff1d46b294e4bba7ece9d95f",
     "skills/reverse-engineer-anything/references/evidence-workflows.md": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57",
-    "skills/reverse-engineer-anything/references/javascript-applications.md": "619cfd15ffdf466452cc32002ae357fefec59d5dcad4c9dfc27630138f0f719d",
-    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "966c118218e6bca0de486008cb2142f70a27051541ac3e05aac8f0902a4c2bdc",
+    "skills/reverse-engineer-anything/references/javascript-applications.md": "15ae2177ef1c41e25095238c64b38f34d8ea53ea3c4c74f627096f90b8eaa54b",
+    "skills/reverse-engineer-anything/references/native-and-artifacts.md": "defbc67dda232bdb940147c8dc5d589bfc7a7f7839c898cc70eb48bade98e469",
     "skills/reverse-engineer-anything/references/runtime-observation.md": "e207a912470a1a56dc02316eb7b040ac50b4d763f2273e97a6811863d9051d74",
     "skills/sdf/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sdf/SKILL.md": "7d808443b522561b23eb8d7417f2aa4f7ab5a6e28599099f996d78092092258d",
