@@ -20,6 +20,36 @@ if SCRIPT.exists():
 
 
 class BundleTests(unittest.TestCase):
+    def test_repository_root_skill_keeps_all_support_files(self):
+        source = {"layout": "repository-root", "root": ".", "skills": ["anatomy"]}
+        inventory = {name: {} for name in ["SKILL.md", "LICENSE", "kit/iso.mjs", "examples/dial/build.mjs", "agents/openai.yaml"]}
+        mappings, available = bundle.upstream_skill_mappings(source, inventory)
+        self.assertEqual(available, ["anatomy"])
+        self.assertEqual(mappings, {"skills/anatomy/" + p: p for p in inventory})
+
+    def test_repository_root_layout_rejects_multiple_skills(self):
+        with self.assertRaisesRegex(ValueError, "one skill"):
+            bundle.upstream_skill_mappings({"layout": "repository-root", "root": ".", "skills": ["alpha", "beta"]}, {"SKILL.md": {}})
+
+    def test_repository_root_layout_rejects_missing_entrypoint(self):
+        with self.assertRaisesRegex(ValueError, "removed/renamed"):
+            bundle.upstream_skill_mappings({"layout": "repository-root", "root": ".", "skills": ["anatomy"]}, {"kit/iso.mjs": {}})
+
+    def test_repository_root_sync_imports_nested_support_without_changing_local_skill(self):
+        upstream = self.prepare_upstream_update()
+        config = json.loads((self.repo / "bundle.json").read_text(encoding="utf-8"))
+        config["sources"][0].update(layout="repository-root", root=".")
+        (self.repo / "bundle.json").write_text(json.dumps(config), encoding="utf-8")
+        root_files = {p.removeprefix("skills/alpha/"): data for p, data in upstream.items()}
+        root_files["kit/iso.mjs"] = b"export const version = 1;\n"
+        root_files["examples/dial/build.mjs"] = b"// complete upstream example\n"
+        before = (self.repo / "skills/beta/SKILL.md").read_bytes()
+        self.assertTrue(self.run_fake_update(root_files)["changed"])
+        self.assertEqual((self.repo / "skills/alpha/kit/iso.mjs").read_bytes(), root_files["kit/iso.mjs"])
+        self.assertTrue((self.repo / "skills/alpha/examples/dial/build.mjs").is_file())
+        self.assertEqual((self.repo / "skills/beta/SKILL.md").read_bytes(), before)
+        self.assertEqual(bundle.validate(self.repo), ["beta", "alpha"])
+
     def setUp(self):
         self.assertIsNotNone(bundle, "Bundle implementation is not present yet")
         self.temp = tempfile.TemporaryDirectory(prefix="skill bundle 한글 ")
@@ -179,13 +209,14 @@ class BundleTests(unittest.TestCase):
 
     def test_real_catalog_complete_and_installable(self):
         names = bundle.validate(ROOT)
-        self.assertEqual(len(names), 24)
-        self.assertEqual(len(set(names)), 24)
+        self.assertEqual(len(names), 25)
+        self.assertEqual(len(set(names)), 25)
         self.assertIn("cad", names)
         self.assertIn("reverse-engineer-anything", names)
-        dest = self.base / "actual 24 packages"
+        self.assertIn("anatomy", names)
+        dest = self.base / "actual 25 packages"
         self.assertEqual(bundle.install(ROOT, dest, apply=True)["status"], "installed")
-        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 24)
+        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 25)
         self.assertEqual((dest / "cad/references/step-generation.md").read_bytes(),
                          (ROOT / "skills/cad/references/step-generation.md").read_bytes())
         self.assertTrue(all(x["status"] == "identical" for x in bundle.install(ROOT, dest)["skills"]))

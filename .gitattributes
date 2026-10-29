@@ -13,6 +13,7 @@ skills/step-parts/** -text
 skills/urdf/** -text
 skills/ponytail*/** -text
 skills/reverse-engineer-anything/** -text
+skills/anatomy/** -text
 third_party/** -text
 bundle.json text eol=lf
 scripts/** text eol=lf

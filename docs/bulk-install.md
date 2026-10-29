@@ -1,12 +1,12 @@
-# 24개 스킬 일괄 설치와 전체 기능 준비
+# 25개 스킬 일괄 설치와 전체 기능 준비
 
-2026-10-16. 이 문서는 설치 요청과 검증 범위를 구분한다. [기계 판독 목록](../bundle.json)이 설치 대상의 기준이다. 과거 `evals/`의 모의 스킬은 설치하지 않는다.
+2026-10-29. 이 문서는 설치 요청과 검증 범위를 구분한다. [기계 판독 목록](../bundle.json)이 설치 대상의 기준이다. 과거 `evals/`의 모의 스킬은 설치하지 않는다.
 
 ## 다른 PC에서 복사할 요청문
 
 ```text
 https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002 를 확인하고
-루트 AGENTS.md와 docs/bulk-install.md에 따라 bundle.json의 24개 스킬을 일괄 설치해줘.
+루트 AGENTS.md와 docs/bulk-install.md에 따라 bundle.json의 25개 스킬을 일괄 설치해줘.
 원본 커밋·라이선스·파일 해시와 지원 파일을 먼저 검증해줘.
 현재 사용 중인 개인/프로젝트 스킬과 플러그인에 동명 항목이 있는지도 확인해줘.
 같은 이름·같은 전체 내용은 건너뛰고, 다른 내용이나 중복 등록은 덮어쓰지 말고 차이를 보고해줘.
@@ -17,7 +17,7 @@ https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002 를 확인하고
 
 스킬은 설치 후 다음 turn/새 대화의 실제 사용 가능 목록에서 확인한다. 파일이 있다는 사실만으로 Desktop 선택기·암묵 선택이나 도구 연결을 통과했다고 보고하지 않는다.
 
-## 설치 목록 — 24개
+## 설치 목록 — 25개
 
 | 그룹 | 이름 | 수 |
 | --- | --- | ---: |
@@ -25,8 +25,9 @@ https://github.com/jeonbyungryong/CODEX_NEW_SKILLS_261002 를 확인하고
 | text-to-cad | `bambu-labs`, `cad`, `dfam-check`, `dfm`, `dxf`, `engineering-drawing`, `gcode`, `sdf`, `sendcutsend`, `srdf`, `step-parts`, `urdf` | 12 |
 | ponytail | `ponytail`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help`, `ponytail-review` | 6 |
 | REA | `reverse-engineer-anything` | 1 |
+| Anatomy | `anatomy` — 전체 kit·scripts·references·8개 예제 | 1 |
 
-설치 가능하다는 뜻이지 모든 작업에 24개를 호출하라는 뜻이 아니다. 일반 소스 검토에는 REA를 생략하고, CAD 모델 생성과 기존 도면 윤곽 복원(`image-to-cad`)도 구분한다. 다른 프로젝트의 기존 AGENTS.md를 이 저장소의 지침으로 덮어쓰지 않는다.
+설치 가능하다는 뜻이지 모든 작업에 25개를 호출하라는 뜻이 아니다. 일반 소스 검토에는 REA를 생략하고, CAD 모델 생성과 기존 도면 윤곽 복원(`image-to-cad`)도 구분한다. 다른 프로젝트의 기존 AGENTS.md를 이 저장소의 지침으로 덮어쓰지 않는다.
 
 ## 설치·중복 처리의 실제 동작
 
@@ -82,4 +83,8 @@ python -B scripts/skill_bundle.py install --dest <확인한-설치-절대경로>
 
 ## 검증과 남는 한계
 
-패키지 검사는 24개 목록·고유 이름·참조 존재·원본 해시와 라이선스를 확인한다. 임시 목적지에서 지원 파일 포함 복사, 재실행 skip, 동명 충돌 시 무변경을 시험한다. CAD 모델 생성, 제조 검사 정확도, REA 엔진 실행, 플러그인 hook 동작, 타PC 선택기·암묵 선택의 일반 성능은 이 패키지 검사로 입증하지 않는다. [검증 기록](../evals/bundle/README.md)과 [업데이트 정책](upstream-updates.md)을 확인한다.
+패키지 검사는 25개 목록·고유 이름·참조 존재·원본 해시와 라이선스를 확인한다. 임시 목적지에서 지원 파일 포함 복사, 재실행 skip, 동명 충돌 시 무변경을 시험한다. CAD 모델 생성, 제조 검사 정확도, REA 엔진 실행, 플러그인 hook 동작, 타PC 선택기·암묵 선택의 일반 성능은 이 패키지 검사로 입증하지 않는다. [검증 기록](../evals/bundle/README.md)과 [업데이트 정책](upstream-updates.md)을 확인한다.
+
+## Anatomy 추가 — 2026-10-29
+
+[Anatomy 설치·검증](anatomy-20261029.md)을 참고하세요. 원본 저장소 자체가 하나의 스킬인 구성도 업데이트 검사에 포함합니다. Node.js 20.10+와 Chrome/Chromium이 필요하며 Windows에서도 지원합니다. 별도 API 키는 필요하지 않지만 Codex 사용량은 발생합니다. 전체 패키지를 포함했으며 커뮤니티 게시·추가 과금은 별도 요청 없이 실행하지 않습니다.

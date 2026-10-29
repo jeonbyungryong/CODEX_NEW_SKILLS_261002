@@ -1,5 +1,16 @@
 # 24-skill bundle verification — 2026-10-16
 
+## Anatomy addition — 2026-10-29
+
+The current catalog has 25 packages. Anatomy preserves all 173 upstream files at
+`1482e8469b0a9e0d8cc18ea2740a01423d29ae80`, including its kit, scripts, references,
+eight examples and MIT license. Complete installed-package bytes matched upstream.
+The Windows Python run passed 19 bundle tests and all 18 existing triage tests.
+The added tests cover repository-root package mapping, rejected malformed layouts,
+and full nested-support sync while preserving a local skill. The historical
+24-package results below remain historical evidence. Hosted CI for this change
+must be checked on its own PR; local tests do not prove hosted execution.
+
 ## Scope
 
 The approved catalog is five unchanged user skills plus all 12 text-to-cad distribution skills, all six ponytail skills, and REA's one end-user investigation skill. Every selected upstream directory is copied in full. Three REA-maintainer skills are intentionally excluded and named in the provenance lock. The source repositories, exact commits, original paths, file SHA-256 and license hashes are retained in `third_party/upstream-lock.json`.

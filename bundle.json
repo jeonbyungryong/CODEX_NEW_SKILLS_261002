@@ -1,25 +1,69 @@
 {
   "schema_version": 1,
   "local_skills": [
-    "coordinate-device-validation", "diagnose-computer-use-recovery",
-    "review-release-evidence", "specify-failure-recovery", "verify-powershell-handoff"
+    "coordinate-device-validation",
+    "diagnose-computer-use-recovery",
+    "review-release-evidence",
+    "specify-failure-recovery",
+    "verify-powershell-handoff"
   ],
   "sources": [
     {
-      "id": "text-to-cad", "repo": "earthtojake/text-to-cad", "ref": "latest", "root": "skills",
-      "skills": ["bambu-labs", "cad", "dfam-check", "dfm", "dxf", "engineering-drawing", "gcode", "sdf", "sendcutsend", "srdf", "step-parts", "urdf"]
+      "id": "text-to-cad",
+      "repo": "earthtojake/text-to-cad",
+      "ref": "latest",
+      "root": "skills",
+      "skills": [
+        "bambu-labs",
+        "cad",
+        "dfam-check",
+        "dfm",
+        "dxf",
+        "engineering-drawing",
+        "gcode",
+        "sdf",
+        "sendcutsend",
+        "srdf",
+        "step-parts",
+        "urdf"
+      ]
     },
     {
-      "id": "ponytail", "repo": "DietrichGebert/ponytail", "ref": "main", "root": "skills",
-      "skills": ["ponytail", "ponytail-audit", "ponytail-debt", "ponytail-gain", "ponytail-help", "ponytail-review"],
+      "id": "ponytail",
+      "repo": "DietrichGebert/ponytail",
+      "ref": "main",
+      "root": "skills",
+      "skills": [
+        "ponytail",
+        "ponytail-audit",
+        "ponytail-debt",
+        "ponytail-gain",
+        "ponytail-help",
+        "ponytail-review"
+      ],
       "extra_files": {
         "skills/ponytail-gain/benchmarks/results/2026-10-07-agentic.md": "benchmarks/results/2026-10-07-agentic.md",
         "skills/ponytail-gain/README.md": "README.md"
       }
     },
     {
-      "id": "rea", "repo": "morluto/rea", "ref": "main", "root": ".agents/skills",
-      "skills": ["reverse-engineer-anything"]
+      "id": "rea",
+      "repo": "morluto/rea",
+      "ref": "main",
+      "root": ".agents/skills",
+      "skills": [
+        "reverse-engineer-anything"
+      ]
+    },
+    {
+      "id": "anatomy",
+      "repo": "wheresryan22/anatomy",
+      "ref": "main",
+      "root": ".",
+      "layout": "repository-root",
+      "skills": [
+        "anatomy"
+      ]
     }
   ]
 }

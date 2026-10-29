@@ -14,7 +14,9 @@ for path in sorted((root / "skills").glob("*/SKILL.md")):
     assert isinstance(metadata["description"], str) and metadata["description"].strip(), path
     assert len(metadata["description"]) <= 1024 and body.strip(), path
     names.append(metadata["name"])
-assert len(names) == 24 and len(set(names)) == 24
+catalog = json.loads((root / "bundle.json").read_text(encoding="utf-8"))
+expected = catalog["local_skills"] + [name for source in catalog["sources"] for name in source["skills"]]
+assert sorted(names) == sorted(expected) and len(set(names)) == len(expected)
 for path in (root / "skills").glob("*/agents/openai.yaml"):
     assert isinstance(yaml.safe_load(path.read_text(encoding="utf-8")), dict), path
 print(json.dumps({"yaml_parsed_packages": len(names), "unique_identities": len(set(names))}))
