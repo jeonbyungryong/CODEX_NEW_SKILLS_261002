@@ -188,6 +188,31 @@ def api(repo, endpoint):
     return download(f"https://api.github.com/repos/{repo}/{endpoint}", api=True)
 
 
+def upstream_skill_mappings(source, inventory):
+    if source.get("layout") == "repository-root":
+        if len(source["skills"]) != 1 or source["root"] != ".":
+            raise ValueError("Repository-root layout requires one skill and root '.'")
+        if "SKILL.md" not in inventory:
+            raise ValueError("Upstream skill removed/renamed: repository root")
+        name = source["skills"][0]
+        return {f"skills/{name}/{path}": path for path in inventory}, [name]
+    if source.get("layout", "skill-directories") != "skill-directories":
+        raise ValueError("Unsupported upstream skill layout")
+    mappings = {}
+    prefix = source["root"].rstrip("/") + "/"
+    available = sorted(p[len(prefix):].split("/")[0] for p in inventory
+                       if p.startswith(prefix) and p.count("/") == prefix.count("/") + 1 and p.endswith("/SKILL.md"))
+    for name in source["skills"]:
+        directory = prefix + name + "/"
+        if directory + "SKILL.md" not in inventory:
+            raise ValueError(f"Upstream skill removed/renamed: {name}")
+        for path in inventory:
+            if path.startswith(directory):
+                mappings[f"skills/{name}/{path[len(directory):]}"] = path
+        mappings.setdefault(f"skills/{name}/LICENSE", "LICENSE")
+    return mappings, available
+
+
 def sync(root, bootstrap=False):
     root = Path(root).resolve()
     config = read_json(root / "bundle.json")
@@ -214,18 +239,7 @@ def sync(root, bootstrap=False):
         if tree.get("truncated"):
             raise ValueError(f"Incomplete upstream inventory: {repo}")
         inventory = {x["path"]: x for x in tree["tree"] if x["type"] == "blob"}
-        mappings = {}
-        prefix = source["root"].rstrip("/") + "/"
-        available = sorted(p[len(prefix):].split("/")[0] for p in inventory
-                           if p.startswith(prefix) and p.count("/") == prefix.count("/") + 1 and p.endswith("/SKILL.md"))
-        for name in source["skills"]:
-            directory = prefix + name + "/"
-            if directory + "SKILL.md" not in inventory:
-                raise ValueError(f"Upstream skill removed/renamed: {repo}: {name}")
-            for path in inventory:
-                if path.startswith(directory):
-                    mappings[f"skills/{name}/{path[len(directory):]}"] = path
-            mappings.setdefault(f"skills/{name}/LICENSE", "LICENSE")
+        mappings, available = upstream_skill_mappings(source, inventory)
         mappings.update(source.get("extra_files", {}))
         mappings[f"third_party/{sid}/LICENSE"] = "LICENSE"
         mappings[f"third_party/{sid}/README.md"] = "README.md"
