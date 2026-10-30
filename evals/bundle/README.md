@@ -1,8 +1,18 @@
 # 24-skill bundle verification — 2026-10-16
 
+## Native CAD addition — 2026-10-31
+
+The current catalog has 27 packages, including local `image-to-cad` and
+`solidworks-dwg-to-native`. All 19 bundle and 18 triage tests passed on Windows;
+the full temporary install includes the new helpers/references. Synthetic drawing
+checks cover millimetre/inch/metre tolerance conversion, unchanged analytic
+CIRCLE/ARC/bulge evidence and an intentionally unclosed gap. Upstream packages
+remain byte-preserved. See [scope and other-PC setup](../../docs/native-cad-setup.md).
+These package/reconstruction results do not establish another PC's CAD readiness.
+
 ## Anatomy addition — 2026-10-29
 
-The current catalog has 25 packages. Anatomy preserves all 173 upstream files at
+That revision had 25 packages. Anatomy preserves all 173 upstream files at
 `1482e8469b0a9e0d8cc18ea2740a01423d29ae80`, including its kit, scripts, references,
 eight examples and MIT license. Complete installed-package bytes matched upstream.
 The Windows Python run passed 19 bundle tests and all 18 existing triage tests.

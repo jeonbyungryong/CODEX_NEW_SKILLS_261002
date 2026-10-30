@@ -209,14 +209,21 @@ class BundleTests(unittest.TestCase):
 
     def test_real_catalog_complete_and_installable(self):
         names = bundle.validate(ROOT)
-        self.assertEqual(len(names), 25)
-        self.assertEqual(len(set(names)), 25)
+        self.assertEqual(len(names), 27)
+        self.assertEqual(len(set(names)), 27)
+        self.assertIn("image-to-cad", names)
+        self.assertIn("solidworks-dwg-to-native", names)
         self.assertIn("cad", names)
         self.assertIn("reverse-engineer-anything", names)
         self.assertIn("anatomy", names)
-        dest = self.base / "actual 25 packages"
+        dest = self.base / "actual 27 packages"
         self.assertEqual(bundle.install(ROOT, dest, apply=True)["status"], "installed")
-        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 25)
+        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 27)
+        for relative in ["image-to-cad/scripts/reconstruct_geometry.py",
+                         "image-to-cad/scripts/pdf_semantics.py",
+                         "solidworks-dwg-to-native/references/solidworks-native.md",
+                         "solidworks-dwg-to-native/references/environment-setup.md"]:
+            self.assertEqual((dest / relative).read_bytes(), (ROOT / "skills" / relative).read_bytes())
         self.assertEqual((dest / "cad/references/step-generation.md").read_bytes(),
                          (ROOT / "skills/cad/references/step-generation.md").read_bytes())
         self.assertTrue(all(x["status"] == "identical" for x in bundle.install(ROOT, dest)["skills"]))

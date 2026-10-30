@@ -1,0 +1,4 @@
+interface:
+  display_name: "DWG to Editable SolidWorks"
+  short_description: "Build native origin-constrained SolidWorks parts."
+  default_prompt: "Use $solidworks-dwg-to-native to convert this drawing into an editable native SolidWorks model with origin-based constraints and verified parameter edits."

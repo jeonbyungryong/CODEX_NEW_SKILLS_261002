@@ -5,7 +5,9 @@
     "diagnose-computer-use-recovery",
     "review-release-evidence",
     "specify-failure-recovery",
-    "verify-powershell-handoff"
+    "verify-powershell-handoff",
+    "image-to-cad",
+    "solidworks-dwg-to-native"
   ],
   "sources": [
     {

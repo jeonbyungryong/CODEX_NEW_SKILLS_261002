@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image to CAD"
+  short_description: "CAD 및 이미지 형상 복원과 치수 검증 도구"
+  default_prompt: "Use $image-to-cad to reconstruct this drawing into validated CAD geometry."
