@@ -4,6 +4,8 @@
 
 ## 현재 상태 — 2026-10-31
 
+**다른 PC에서 시작하기: [CAD 스킬 설치부터 실행 환경 점검까지 — 복사할 요청문](docs/cad-other-pc-request.md)**. 문서의 코드 블록 전체를 해당 PC의 Codex에 전달하세요.
+
 DWG 벡터 복원과 원점 기준 완전 구속·네이티브 피처 모델링을 위한 `image-to-cad`, `solidworks-dwg-to-native`를 추가했습니다. [다른 PC의 SolidWorks 준비·설치·사용 요청문](docs/native-cad-setup.md)을 제공합니다. 원본 도면과 개인 PC 경로는 배포하지 않습니다. 기존 Anatomy 전체 패키지와 8개 예제도 유지합니다. [설치·검증 범위](docs/anatomy-20261029.md). 업데이트는 기존과 같이 리뷰 PR로만 준비합니다.
 
 **일괄 설치 목록은 총 27개입니다: 기존 사용자 스킬 5개 + DWG 네이티브 변환 2개 + text-to-cad 12개 + ponytail 6개 + REA 사용자용 1개 + Anatomy 1개.** [27개 설치 목록·다른 PC 복사 요청문·전체 기능 준비](docs/bulk-install.md)를 먼저 확인하세요. 외부 스킬은 본문만 발췌하지 않고 해당 패키지의 모든 지원 파일과 원본·MIT 라이선스를 보존했습니다. [원본·라이선스](THIRD_PARTY_NOTICES.md), [고정 커밋·해시](third_party/upstream-lock.json), [검증 기록](evals/bundle/README.md)을 제공합니다.
@@ -113,6 +115,7 @@ PowerShell 인계에는 `skills/verify-powershell-handoff`, Windows native 진�
 
 | 문서 | 내용 |
 | --- | --- |
+| [다른 PC용 CAD 설치·환경 점검 요청문](docs/cad-other-pc-request.md) | 복사 가능한 전체 요청문: 스킬 설치, CAD 환경 확인, 원점 완전 구속·네이티브 부품 편집·재열기 시험 |
 | [Desktop 수동 확인 안내](docs/desktop-manual-skill-check.md) | 기존 설치본을 보존하는 임시 준비, 선택기·암묵 요청문, 증거 수준과 중단 기준 |
 | [Desktop 결과 기록 양식](templates/desktop-skill-check-results.md) | 미실행 빈 양식. 선택기·칩·본문/경로·CLI 비교·보존·공개 정보 점검 |
 | [Desktop 관측 한계·CLI 암묵 선택 — 10/15](evals/desktop-skill-boundary-20261015/README.md) | UI 초기화 실패, 두 양성·산술 음성의 실제 읽기, CLI와 Desktop을 합칠 수 없는 한계 |
