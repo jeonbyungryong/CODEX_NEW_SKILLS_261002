@@ -22,8 +22,9 @@ module.exports = function readWindowsInput(file, limit) {
   const bootstrap = fs.readFileSync(path.join(__dirname, 'windows-safe-input.ps1'), 'utf8');
   const r = spawnSync(powershell, ['-NoLogo', '-NoProfile', '-NonInteractive', '-Command', bootstrap], {
     input: JSON.stringify({path:full, limit}), encoding:'utf8', windowsHide:true,
-    timeout:4000, maxBuffer:8 * 1024 * 1024, env,
+    timeout:10000, maxBuffer:8 * 1024 * 1024, env,
   });
+  if (r.error?.code === 'ETIMEDOUT') throw new Error('Windows input helper exceeded time limit');
   if (r.error || r.status !== 0) throw new Error('input could not be opened or read safely');
   let reply;
   try { reply = JSON.parse(r.stdout.replace(/^\uFEFF/, '')); }

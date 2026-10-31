@@ -24,7 +24,7 @@ ordinary file paths are accepted: UNC/network drives, device namespaces, DOS
 devices, alternate data streams and ambiguous names are rejected before open.
 Unicode local filenames are supported.
 
-The reader enforces 5 MiB and a four-second process timeout; fatal UTF-8,
+The reader enforces 5 MiB and a ten-second process timeout; fatal UTF-8,
 schema, nesting, cardinality, diagnostic sanitization and semantic checks remain
 in the existing validators. The POSIX reader is unchanged. This does not provide
 the OS sandbox required for executing untrusted audit targets.

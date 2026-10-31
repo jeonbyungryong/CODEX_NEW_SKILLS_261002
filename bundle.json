@@ -140,17 +140,17 @@
         "skills/security-audit/validate-findings.test.cjs": {
           "file": "patches/security-audit/validate-findings.test.cjs",
           "upstream_sha256": "b92001117a92c4161d43777a0ba2fa182a8a4d97f2304cc8c0cee5331497b73b",
-          "sha256": "0c9fc9bd907bd86b59816ac4bff9f5cbcbb12b510eee6bea8eff243a5d15000c"
+          "sha256": "6f9a78489f49c808d5966d54c2f5e2c20b2c780a6038f6cbd72395a819dc3af6"
         },
         "skills/security-audit/validate-coverage-ledger.test.cjs": {
           "file": "patches/security-audit/validate-coverage-ledger.test.cjs",
           "upstream_sha256": "cfb9df26b03469a4279a70e7664a2a5434dd6f8c2c204e91f9b0aeb9dd71e648",
-          "sha256": "bbf8a05cc92a011523d478d1731b602c2b0cac36e24c494656043f015ffbcd4d"
+          "sha256": "1f01f7586127885fd780ce4c117d898bb070fa0591885282ede114a5d97742b8"
         },
         "skills/security-audit/windows-safe-input.cjs": {
           "file": "patches/security-audit/windows-safe-input.cjs",
           "upstream_sha256": null,
-          "sha256": "94cfb6c6ac01b1ec473ea0d2b43b089d4a0e3fa05a9b3150084cbee3ba3201a3"
+          "sha256": "9d9421b3a57133af8b41af2b18eb5cf3a1bd9d364add66cc6cff8a3717ccc747"
         },
         "skills/security-audit/windows-safe-input.ps1": {
           "file": "patches/security-audit/windows-safe-input.ps1",

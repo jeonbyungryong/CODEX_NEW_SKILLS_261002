@@ -16,7 +16,7 @@ UNC·네트워크 드라이브·장치·대체 데이터 스트림·reparse poin
 Windows에서 POSIX 전용 open flags를 생략하는 대신 Win32 handle 기반 입력 경로를 추가했다.
 부모 디렉터리와 입력 파일을 쓰기·삭제 공유 없이 고정하고, reparse point 자체를 열어
 파일 종류·속성·크기를 검사한다. 5 MiB 제한, 엄격한 UTF-8, JSON 깊이·개수·스키마·의미
-검사와 오류 메시지 정리는 유지한다. PowerShell 자식 프로세스에는 4초 제한을 둔다.
+검사와 오류 메시지 정리는 유지한다. PowerShell 자식 프로세스에는 10초 제한을 둔다.
 입력 경로나 JSON을 명령 문자열에 삽입하지 않으며 실행 정책·계정·방화벽 설정도 변경하지 않는다.
 Win32 API 근거와 구현 범위는 [패치 안내](../patches/security-audit/README.md)에 연결했다.
 
