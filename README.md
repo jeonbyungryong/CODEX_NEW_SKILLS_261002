@@ -4,11 +4,13 @@
 
 ## 현재 상태 — 2026-10-31
 
+Taste, PPT Master, HyperFrames(8개), Impeccable, Security Audit의 전체 사용자 패키지를 추가했습니다. [다섯 저장소 설치·무료 실행 범위](docs/five-skills-20261031.md). 원본 파일·MIT/Apache-2.0 라이선스와 고정 커밋/해시를 보존하며, 개인 PC와 main을 자동 갱신하지 않습니다.
+
 **다른 PC에서 시작하기: [CAD 스킬 설치부터 실행 환경 점검까지 — 복사할 요청문](docs/cad-other-pc-request.md)**. 문서의 코드 블록 전체를 해당 PC의 Codex에 전달하세요.
 
 DWG 벡터 복원과 원점 기준 완전 구속·네이티브 피처 모델링을 위한 `image-to-cad`, `solidworks-dwg-to-native`를 추가했습니다. [다른 PC의 SolidWorks 준비·설치·사용 요청문](docs/native-cad-setup.md)을 제공합니다. 원본 도면과 개인 PC 경로는 배포하지 않습니다. 기존 Anatomy 전체 패키지와 8개 예제도 유지합니다. [설치·검증 범위](docs/anatomy-20261029.md). 업데이트는 기존과 같이 리뷰 PR로만 준비합니다.
 
-**일괄 설치 목록은 총 27개입니다: 기존 사용자 스킬 5개 + DWG 네이티브 변환 2개 + text-to-cad 12개 + ponytail 6개 + REA 사용자용 1개 + Anatomy 1개.** [27개 설치 목록·다른 PC 복사 요청문·전체 기능 준비](docs/bulk-install.md)를 먼저 확인하세요. 외부 스킬은 본문만 발췌하지 않고 해당 패키지의 모든 지원 파일과 원본·MIT 라이선스를 보존했습니다. [원본·라이선스](THIRD_PARTY_NOTICES.md), [고정 커밋·해시](third_party/upstream-lock.json), [검증 기록](evals/bundle/README.md)을 제공합니다.
+**일괄 설치 목록은 총 39개입니다: 기존 사용자 스킬 5개 + DWG 네이티브 변환 2개 + text-to-cad 12개 + ponytail 6개 + REA 사용자용 1개 + Anatomy 1개 + Taste/PPT Master/Impeccable/Security Audit 각 1개 + HyperFrames 8개.** [39개 설치 목록·다른 PC 복사 요청문·전체 기능 준비](docs/bulk-install.md)를 먼저 확인하세요. 외부 스킬은 본문만 발췌하지 않고 해당 패키지의 모든 지원 파일과 원본·MIT/Apache-2.0 라이선스를 보존했습니다. [원본·라이선스](THIRD_PARTY_NOTICES.md), [고정 커밋·해시](third_party/upstream-lock.json), [검증 기록](evals/bundle/README.md)을 제공합니다.
 
 **스킬 설치와 CAD/REA 전체 실행 환경은 별개입니다.** CAD 엔진·MCP·분석 도구·플러그인 hooks를 설치했다고 주장하지 않습니다. 기능까지 필요한 PC에는 [공식 전체 설치 경로와 중복 방지 안내](docs/bulk-install.md#전체-기능이-필요할-때의-별도-준비-경로)를 제공합니다. [업데이트 자동 검사](docs/upstream-updates.md)는 매시간·수동·외부 dispatch로 검사하고 검증된 리뷰 브랜치/PR을 준비하며, main 병합이나 기존 PC 갱신은 자동 실행하지 않습니다.
 
@@ -48,7 +50,7 @@ DWG 벡터 복원과 원점 기준 완전 구속·네이티브 피처 모델링�
 
 기존 세 스킬의 최신 근거는 [10/8 추가 검증 보고](docs/additional-validation-20261008.md)입니다. 초기 PyYAML 누락에 따른 BLOCKED와 이전 PARTIAL은 당시 기록으로 보존하며, 후속 결과를 소급 적용하지 않습니다.
 
-## 기존 사용자 Skill 5개 — 외부 20개는 별도 설치 목록 참조
+## 기존 사용자 Skill 5개 — 전체 39개는 별도 설치 목록 참조
 
 | Skill | 용도 | 현재 채택·검증 경계 |
 | --- | --- | --- |
@@ -88,7 +90,7 @@ DWG 벡터 복원과 원점 기준 완전 구속·네이티브 피처 모델링�
 
 ## 설치·사용
 
-전체 설치 요청은 [27개 일괄 설치 안내](docs/bulk-install.md)의 복사 요청문을 사용합니다. `bundle.json`이 유일한 전체 목록이며, `evals/`의 과거 모의 스킬은 포함하지 않습니다. 현재 PC 기존 설치본·설정을 바꾸지 않는 검증과 실제 타PC 설치를 구분합니다. 아래의 개별 설치 요청도 계속 사용할 수 있습니다.
+전체 설치 요청은 [39개 일괄 설치 안내](docs/bulk-install.md)의 복사 요청문을 사용합니다. `bundle.json`이 유일한 전체 목록이며, `evals/`의 과거 모의 스킬은 포함하지 않습니다. 현재 PC 기존 설치본·설정을 바꾸지 않는 검증과 실제 타PC 설치를 구분합니다. 아래의 개별 설치 요청도 계속 사용할 수 있습니다.
 
 먼저 [사용 안내](docs/usage.md)를 읽고 지침 파일을 명시적으로 지정해 시험하세요. 전역 설치는 명시적인 요청과 결과 확인을 거칩니다. 이번 두 스킬은 요청자의 기존 개인 설치본이 있어 중복 설치 없이 게시 파일과 일치를 확인했습니다. 다른 사용자의 PC에는 자동 설치되지 않습니다.
 

@@ -1,5 +1,33 @@
 # 24-skill bundle verification — 2026-10-16
 
+## Five upstream additions — 2026-10-31
+
+The current catalog contains 39 packages. Taste, PPT Master, Impeccable and
+Security Audit contribute one package each; HyperFrames contributes all eight
+public skill packages. All 13,786 locked staged files match their SHA-256 values;
+all 288 previous locked files and four previous source records are preserved.
+All 39 YAML frontmatters parse with unique identities. The 12 installed packages
+match the vendored package files, including exact upstream license supplements.
+
+New regression cases cover explicit directory aliases, unsafe/unapproved aliases,
+and explicitly approved Apache-2.0 versus unexpected license text. The original
+MIT license-change stop-before-write test remains in place. Full-package temporary
+installation/reinstallation covers the complete catalog, including PPT Master's
+13,051 files. CI's validation timeout is 30 minutes for the expanded payload.
+
+Free local smoke checks produced an editable one-slide PPTX and a five-frame
+H.264 MP4, and exercised the verified Impeccable engine. The Security Audit
+upstream Node suite on Windows returned 46 pass, 7 fail, 12 skip: its findings CLI
+fails closed because no-follow/nonblocking file input protection is unavailable.
+The upstream code remains unchanged. This is a documented runtime limit, not a
+passing security-audit claim. See [installation scope](../../docs/five-skills-20261031.md).
+
+The older dated sections below retain their historical counts and observations.
+
+Local Windows verification passed all 22 bundle tests (723.070 s), all 18 existing
+triage tests, and all 39 YAML frontmatter/identity checks. Hosted CI must still be
+read on this PR; these local results do not establish hosted execution.
+
 ## Native CAD addition — 2026-10-31
 
 The current catalog has 27 packages, including local `image-to-cad` and

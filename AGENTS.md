@@ -1,6 +1,6 @@
 # Skills bundle maintenance and installation
 
-- The canonical bulk-install list is `bundle.json`, not every `SKILL.md` in historical eval fixtures. It currently contains 27 packages. Run `python -B scripts/skill_bundle.py validate` before installation/publication.
+- The canonical bulk-install list is `bundle.json`, not every `SKILL.md` in historical eval fixtures. It currently contains 39 packages. Run `python -B scripts/skill_bundle.py validate` before installation/publication.
 - A bulk-install request includes all listed packages, not CAD/REA runtimes, MCP registration, plugin hooks, telemetry choices, accounts, printing, orders or paid services. Report those prerequisites separately; do not silently describe skill-file copying as full runtime readiness.
 - Before installing, inspect the current environment's available skills/plugins for matching identities, then run the install planner with an explicit destination. Identical complete packages are skipped. A changed same-name package or a duplicate frontmatter identity in another folder blocks the whole apply before writes. Preserve custom copies; never overwrite them automatically.
 - If `skill-installer` is available, follow its instructions and use its GitHub helper for the missing paths after the preflight. Otherwise the repository's `install --apply` is a dependency-free file-copy fallback. Do not use both a plugin and a second skills-only copy of the same package.

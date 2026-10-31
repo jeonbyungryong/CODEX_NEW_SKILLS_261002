@@ -222,3 +222,6 @@ __marimo__/
 *.local.log
 local-evidence/
 .validation-deps/
+
+# Preserve every reviewed vendored support file, including scripts/lib/.
+!skills/**

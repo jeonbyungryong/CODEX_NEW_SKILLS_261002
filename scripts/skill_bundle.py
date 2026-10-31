@@ -200,10 +200,19 @@ def upstream_skill_mappings(source, inventory):
         raise ValueError("Unsupported upstream skill layout")
     mappings = {}
     prefix = source["root"].rstrip("/") + "/"
+    aliases = source.get("skill_paths", {})
+    if not isinstance(aliases, dict) or set(aliases) - set(source["skills"]):
+        raise ValueError("Unapproved skill path alias")
+    for directory in aliases.values():
+        safe_path(Path("."), directory)
+        if not directory.startswith(prefix) or directory[len(prefix):].count("/"):
+            raise ValueError("Alias must name a direct child of the source root")
+    reverse_aliases = {directory[len(prefix):]: name for name, directory in aliases.items()}
     available = sorted(p[len(prefix):].split("/")[0] for p in inventory
                        if p.startswith(prefix) and p.count("/") == prefix.count("/") + 1 and p.endswith("/SKILL.md"))
+    available = sorted(reverse_aliases.get(name, name) for name in available)
     for name in source["skills"]:
-        directory = prefix + name + "/"
+        directory = aliases.get(name, prefix + name) + "/"
         if directory + "SKILL.md" not in inventory:
             raise ValueError(f"Upstream skill removed/renamed: {name}")
         for path in inventory:
@@ -211,6 +220,14 @@ def upstream_skill_mappings(source, inventory):
                 mappings[f"skills/{name}/{path[len(directory):]}"] = path
         mappings.setdefault(f"skills/{name}/LICENSE", "LICENSE")
     return mappings, available
+
+
+def reviewed_license(source, data):
+    identity = source.get("license", "MIT")
+    signatures = {"MIT": (b"MIT License",), "Apache-2.0": (b"Apache License", b"Version 2.0")}
+    if identity not in signatures or not all(part in data for part in signatures[identity]):
+        raise ValueError(f"License requires review: {source.get('repo', 'unknown')}")
+    return identity
 
 
 def sync(root, bootstrap=False):
@@ -266,12 +283,11 @@ def sync(root, bootstrap=False):
                 origins[local] = {"source": sid, "path": upstream}
         license_data = blobs[f"third_party/{sid}/LICENSE"]
         license_hash = hashlib.sha256(license_data).hexdigest()
-        if b"MIT License" not in license_data:
-            raise ValueError(f"License requires review: {repo}")
+        license_id = reviewed_license(source, license_data)
         if old and old["sources"][sid]["license_sha256"] != license_hash:
             raise ValueError(f"License changed; review required: {repo}")
         provenance[sid] = {"repo": repo, "ref": source["ref"], "commit": sha,
-                           "license": "MIT", "license_sha256": license_hash,
+                           "license": license_id, "license_sha256": license_hash,
                            "selected_skills": source["skills"], "unselected_skills": sorted(set(available) - set(source["skills"]))}
 
     lock = {"schema_version": 1, "sources": provenance,

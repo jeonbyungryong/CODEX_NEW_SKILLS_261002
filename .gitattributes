@@ -21,3 +21,15 @@ bundle.json text eol=lf
 scripts/** text eol=lf
 .github/workflows/** text eol=lf
 evals/bundle/** text eol=lf
+skills/design-taste-frontend/** -text
+skills/ppt-master/** -text
+skills/figma/** -text
+skills/hyperframes/** -text
+skills/hyperframes-cli/** -text
+skills/hyperframes-registry/** -text
+skills/media-use/** -text
+skills/remotion-to-hyperframes/** -text
+skills/reverse-any-video/** -text
+skills/slideshow/** -text
+skills/impeccable/** -text
+skills/security-audit/** -text
