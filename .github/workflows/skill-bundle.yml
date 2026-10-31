@@ -18,6 +18,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  windows-input-probe:
+    runs-on: windows-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: node evals/security-audit/probe-windows.cjs
   validate:
     strategy:
       matrix:
