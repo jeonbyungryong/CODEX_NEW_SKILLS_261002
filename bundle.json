@@ -66,6 +66,66 @@
       "skills": [
         "anatomy"
       ]
+    },
+    {
+      "id": "taste",
+      "repo": "Leonxlnx/taste-skill",
+      "ref": "main",
+      "root": "skills",
+      "skills": [
+        "design-taste-frontend"
+      ],
+      "license": "MIT",
+      "skill_paths": {
+        "design-taste-frontend": "skills/taste-skill"
+      }
+    },
+    {
+      "id": "ppt-master",
+      "repo": "hugohe3/ppt-master",
+      "ref": "main",
+      "root": "skills",
+      "skills": [
+        "ppt-master"
+      ],
+      "license": "MIT"
+    },
+    {
+      "id": "hyperframes",
+      "repo": "heygen-com/hyperframes",
+      "ref": "main",
+      "root": "skills",
+      "skills": [
+        "figma",
+        "hyperframes",
+        "hyperframes-cli",
+        "hyperframes-registry",
+        "media-use",
+        "remotion-to-hyperframes",
+        "reverse-any-video",
+        "slideshow"
+      ],
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "ref": "main",
+      "root": ".agents/skills",
+      "skills": [
+        "impeccable"
+      ],
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "security-audit",
+      "repo": "cloudflare/security-audit-skill",
+      "ref": "main",
+      "root": "skills",
+      "skills": [
+        "security-audit"
+      ],
+      "license": "MIT"
     }
   ]
 }

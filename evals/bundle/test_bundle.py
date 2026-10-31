@@ -20,6 +20,26 @@ if SCRIPT.exists():
 
 
 class BundleTests(unittest.TestCase):
+    def test_explicit_alias_preserves_complete_package_and_identity(self):
+        source = {"root": "skills", "skills": ["alpha"], "skill_paths": {"alpha": "skills/old-folder"}}
+        inventory = {p: {} for p in ["skills/old-folder/SKILL.md", "skills/old-folder/assets/a.svg", "LICENSE"]}
+        mappings, available = bundle.upstream_skill_mappings(source, inventory)
+        self.assertEqual(mappings["skills/alpha/assets/a.svg"], "skills/old-folder/assets/a.svg")
+        self.assertEqual(available, ["alpha"])
+
+    def test_alias_rejects_unsafe_or_unapproved_paths(self):
+        for aliases in [{"alpha": "../escape"}, {"alpha": "/absolute"}, {"beta": "skills/beta"}]:
+            with self.subTest(aliases=aliases), self.assertRaises(ValueError):
+                bundle.upstream_skill_mappings({"root": "skills", "skills": ["alpha"], "skill_paths": aliases}, {})
+
+    def test_apache_license_requires_explicit_approval(self):
+        data = b"Apache License\nVersion 2.0, January 2004\n"
+        self.assertEqual(bundle.reviewed_license({"license": "Apache-2.0"}, data), "Apache-2.0")
+        with self.assertRaises(ValueError):
+            bundle.reviewed_license({}, data)
+        with self.assertRaises(ValueError):
+            bundle.reviewed_license({"license": "Apache-2.0"}, b"new proprietary terms")
+
     def test_repository_root_skill_keeps_all_support_files(self):
         source = {"layout": "repository-root", "root": ".", "skills": ["anatomy"]}
         inventory = {name: {} for name in ["SKILL.md", "LICENSE", "kit/iso.mjs", "examples/dial/build.mjs", "agents/openai.yaml"]}
@@ -209,16 +229,16 @@ class BundleTests(unittest.TestCase):
 
     def test_real_catalog_complete_and_installable(self):
         names = bundle.validate(ROOT)
-        self.assertEqual(len(names), 27)
-        self.assertEqual(len(set(names)), 27)
+        self.assertEqual(len(names), 39)
+        self.assertEqual(len(set(names)), 39)
         self.assertIn("image-to-cad", names)
         self.assertIn("solidworks-dwg-to-native", names)
         self.assertIn("cad", names)
         self.assertIn("reverse-engineer-anything", names)
         self.assertIn("anatomy", names)
-        dest = self.base / "actual 27 packages"
+        dest = self.base / "actual 39 packages"
         self.assertEqual(bundle.install(ROOT, dest, apply=True)["status"], "installed")
-        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 27)
+        self.assertEqual(len(list(dest.glob("*/SKILL.md"))), 39)
         for relative in ["image-to-cad/scripts/reconstruct_geometry.py",
                          "image-to-cad/scripts/pdf_semantics.py",
                          "solidworks-dwg-to-native/references/solidworks-native.md",
