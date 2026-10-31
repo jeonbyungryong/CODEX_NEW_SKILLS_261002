@@ -4,6 +4,8 @@
 
 ## 현재 상태 — 2026-10-31
 
+Security Audit의 두 보고서 검증 CLI에 [Windows 지원 패치](docs/security-audit-windows.md)를 추가했습니다. 기본 PowerShell과 Node로 실행하며, 원본 해시·라이선스와 검토한 패치를 별도로 추적합니다.
+
 Taste, PPT Master, HyperFrames(8개), Impeccable, Security Audit의 전체 사용자 패키지를 추가했습니다. [다섯 저장소 설치·무료 실행 범위](docs/five-skills-20261031.md). 원본 파일·MIT/Apache-2.0 라이선스와 고정 커밋/해시를 보존하며, 개인 PC와 main을 자동 갱신하지 않습니다.
 
 **다른 PC에서 시작하기: [CAD 스킬 설치부터 실행 환경 점검까지 — 복사할 요청문](docs/cad-other-pc-request.md)**. 문서의 코드 블록 전체를 해당 PC의 Codex에 전달하세요.

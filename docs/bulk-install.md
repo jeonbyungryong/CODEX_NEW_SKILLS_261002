@@ -1,5 +1,7 @@
 # 39개 스킬 일괄 설치와 전체 기능 준비
 
+Security Audit에는 검토한 [Windows 보고서 CLI 호환 패치](security-audit-windows.md)도 포함된다.
+
 2026-10-31. 이 문서는 설치 요청과 검증 범위를 구분한다. [기계 판독 목록](../bundle.json)이 설치 대상의 기준이다. 과거 `evals/`의 모의 스킬은 설치하지 않는다.
 
 ## 다른 PC에서 복사할 요청문

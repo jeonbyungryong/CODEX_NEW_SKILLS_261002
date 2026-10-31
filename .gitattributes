@@ -17,6 +17,7 @@ skills/anatomy/** -text
 skills/image-to-cad/** -text
 skills/solidworks-dwg-to-native/** -text
 third_party/** -text
+patches/** -text
 bundle.json text eol=lf
 scripts/** text eol=lf
 .github/workflows/** text eol=lf

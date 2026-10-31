@@ -719,6 +719,11 @@ function collectUnitErrors(unit, index) {
 }
 
 function readFileWithinLimit(file) {
+  // Reviewed local Windows compatibility patch; POSIX path is unchanged.
+  if (process.platform === "win32") {
+    try { return require("./windows-safe-input.cjs")(file, MAX_INPUT_BYTES); }
+    catch (error) { throw new SafeInputError(error.message); }
+  }
   const noFollow = fs.constants.O_NOFOLLOW;
   const nonBlock = fs.constants.O_NONBLOCK;
   if (!Number.isInteger(noFollow) || noFollow === 0 || !Number.isInteger(nonBlock) || nonBlock === 0) {

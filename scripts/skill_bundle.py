@@ -96,6 +96,12 @@ def check_lock(root):
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError(f"Upstream hash mismatch: {relative}")
     for source in read_json(root / "bundle.json")["sources"]:
+        for target, meta, data in overlay_files(root, source):
+            origin = lock.get("origins", {}).get(target, {})
+            if (lock["files"].get(target) != meta["sha256"] or
+                    origin.get("overlay") != meta["file"] or
+                    origin.get("upstream_sha256") != meta["upstream_sha256"]):
+                raise ValueError(f"Overlay provenance mismatch: {target}")
         if source["id"] not in lock["sources"]:
             raise ValueError(f"Missing provenance: {source['id']}")
         for name in source["skills"]:
@@ -230,6 +236,34 @@ def reviewed_license(source, data):
     return identity
 
 
+def overlay_files(root, source):
+    for target, meta in source.get("overlays", {}).items():
+        safe_path(root, target)
+        if not any(target.startswith(f"skills/{name}/") for name in source["skills"]):
+            raise ValueError("Overlay target outside owned scope")
+        if not meta["file"].startswith(f"patches/{source['id']}/"):
+            raise ValueError("Overlay source outside approved scope")
+        canonical = safe_path(root, meta["file"])
+        reject_links(canonical)
+        data = canonical.read_bytes()
+        if hashlib.sha256(data).hexdigest() != meta["sha256"]:
+            raise ValueError(f"Overlay hash mismatch: {target}")
+        yield target, meta, data
+
+
+def apply_overlays(root, source, blobs, origins):
+    for target, meta, data in overlay_files(root, source):
+        base = meta["upstream_sha256"]
+        if base is None:
+            if target in blobs:
+                raise ValueError(f"Overlay addition collides with upstream: {target}")
+        elif target not in blobs or hashlib.sha256(blobs[target]).hexdigest() != base:
+            raise ValueError(f"Overlay base changed; review required: {target}")
+        blobs[target] = data
+        origins[target] = {**origins.get(target, {"source": source["id"], "path": None}),
+                           "overlay": meta["file"], "upstream_sha256": base}
+
+
 def sync(root, bootstrap=False):
     root = Path(root).resolve()
     config = read_json(root / "bundle.json")
@@ -281,6 +315,7 @@ def sync(root, bootstrap=False):
                     raise ValueError(f"Overlapping upstream ownership: {local}")
                 blobs[local] = data
                 origins[local] = {"source": sid, "path": upstream}
+        apply_overlays(root, source, blobs, origins)
         license_data = blobs[f"third_party/{sid}/LICENSE"]
         license_hash = hashlib.sha256(license_data).hexdigest()
         license_id = reviewed_license(source, license_data)
@@ -297,6 +332,11 @@ def sync(root, bootstrap=False):
     with tempfile.TemporaryDirectory(prefix="skill-sync-") as scratch:
         stage = Path(scratch)
         write_json(stage / "bundle.json", config)
+        for source in config["sources"]:
+            for target, meta, data in overlay_files(root, source):
+                canonical = safe_path(stage, meta["file"])
+                canonical.parent.mkdir(parents=True, exist_ok=True)
+                canonical.write_bytes(data)
         for name in config["local_skills"]:
             shutil.copytree(root / "skills" / name, stage / "skills" / name)
         for relative, data in blobs.items():

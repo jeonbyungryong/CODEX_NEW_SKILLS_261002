@@ -1,5 +1,20 @@
 # 24-skill bundle verification — 2026-10-16
 
+## Windows Security Audit compatibility — 2026-10-31 follow-up
+
+The source report CLI failure was reproduced before editing (46 pass / 7 fail /
+12 skip). A Windows Win32-handle input reader now supports both CLIs without
+changing POSIX input protection. Native Windows validation passed 68 tests:
+64 pass, zero failures, four original POSIX FIFO/symlink cases skipped; new
+Windows tests cover ancestor and leaf junction rejection and Unicode filenames.
+The actually installed shared package also returned PASS for both CLIs and its
+23 files match the distribution hashes.
+
+The final bundle run passed all 25 tests (183.592 s), including the end-to-end
+overlay update/reject-before-write case. The existing 18 triage tests and all 39 YAML
+frontmatters parse. Reviewed local overlays are explicit exceptions to the initial
+byte-identical upstream import described below. See [Windows setup and scope](../../docs/security-audit-windows.md).
+
 ## Five upstream additions — 2026-10-31
 
 The current catalog contains 39 packages. Taste, PPT Master, Impeccable and
