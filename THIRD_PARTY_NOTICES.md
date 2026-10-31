@@ -1,6 +1,10 @@
 # Third-party skill notices
 
-The imported files retain their upstream contents and copyrights. Each installed third-party skill directory includes the upstream MIT or Apache-2.0 license. This notice does not relicense the five original user-authored skills or historical evaluation documents.
+Security Audit includes an explicitly reviewed local Windows compatibility overlay.
+The original base and replacement hashes are recorded separately; its MIT license
+is retained. See [patch provenance](patches/security-audit/README.md).
+
+Unmodified imports retain their upstream contents; reviewed local changes are identified above and in the provenance lock. All upstream copyrights and MIT or Apache-2.0 licenses remain in the installed third-party skill directories. This notice does not relicense the five original user-authored skills or historical evaluation documents.
 
 | Source | Included scope | License |
 | --- | --- | --- |

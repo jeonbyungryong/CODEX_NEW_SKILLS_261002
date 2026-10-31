@@ -20,6 +20,40 @@ if SCRIPT.exists():
 
 
 class BundleTests(unittest.TestCase):
+    def test_reviewed_overlay_replaces_only_expected_base_and_records_origin(self):
+        canonical = self.repo / 'patches/sample/fix.cjs'
+        canonical.parent.mkdir(parents=True)
+        canonical.write_bytes(b'fixed\n')
+        source = {'id':'sample', 'skills':['alpha'], 'overlays': {
+            'skills/alpha/fix.cjs': {'file':'patches/sample/fix.cjs',
+                'upstream_sha256':hashlib.sha256(b'old\n').hexdigest(),
+                'sha256':hashlib.sha256(b'fixed\n').hexdigest()}}}
+        blobs = {'skills/alpha/fix.cjs':b'old\n'}
+        origins = {'skills/alpha/fix.cjs':{'source':'sample','path':'skills/alpha/fix.cjs'}}
+        bundle.apply_overlays(self.repo, source, blobs, origins)
+        self.assertEqual(blobs['skills/alpha/fix.cjs'], b'fixed\n')
+        self.assertEqual(origins['skills/alpha/fix.cjs']['overlay'], 'patches/sample/fix.cjs')
+        with self.assertRaisesRegex(ValueError, 'base changed'):
+            bundle.apply_overlays(self.repo, source, {'skills/alpha/fix.cjs':b'new upstream'}, {})
+        canonical.write_bytes(b'unreviewed')
+        with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+            bundle.apply_overlays(self.repo, source, {'skills/alpha/fix.cjs':b'old\n'}, {})
+
+    def test_overlay_addition_rejects_collision_and_unowned_target(self):
+        canonical = self.repo / 'patches/sample/new.cjs'
+        canonical.parent.mkdir(parents=True)
+        canonical.write_bytes(b'new')
+        meta = {'file':'patches/sample/new.cjs', 'upstream_sha256':None, 'sha256':hashlib.sha256(b'new').hexdigest()}
+        source = {'id':'sample','skills':['alpha'],'overlays':{'skills/alpha/new.cjs':meta}}
+        blobs, origins = {}, {}
+        bundle.apply_overlays(self.repo, source, blobs, origins)
+        self.assertEqual(blobs['skills/alpha/new.cjs'], b'new')
+        with self.assertRaisesRegex(ValueError, 'collides'):
+            bundle.apply_overlays(self.repo, source, blobs, origins)
+        source['overlays'] = {'skills/beta/new.cjs':meta}
+        with self.assertRaisesRegex(ValueError, 'scope'):
+            bundle.apply_overlays(self.repo, source, {}, {})
+
     def test_explicit_alias_preserves_complete_package_and_identity(self):
         source = {"root": "skills", "skills": ["alpha"], "skill_paths": {"alpha": "skills/old-folder"}}
         inventory = {p: {} for p in ["skills/old-folder/SKILL.md", "skills/old-folder/assets/a.svg", "LICENSE"]}
@@ -190,8 +224,7 @@ class BundleTests(unittest.TestCase):
         (self.repo / "third_party/upstream-lock.json").write_text(json.dumps(lock), encoding="utf-8")
         return upstream
 
-    def run_fake_update(self, upstream):
-        sha = "b" * 40
+    def run_fake_update(self, upstream, sha="b" * 40):
         tree = {"truncated": False, "tree": [{"path": path, "type": "blob", "mode": "100644",
                 "sha": hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()}
                 for path, data in upstream.items()]}
@@ -200,6 +233,34 @@ class BundleTests(unittest.TestCase):
         with patch.object(bundle, "api", side_effect=response), patch.object(
                 bundle, "download", side_effect=lambda url: upstream[url.split("/" + sha + "/", 1)[1]]):
             return bundle.sync(self.repo)
+
+    def test_sync_stages_overlay_and_rejects_changed_base_without_writes(self):
+        upstream = self.prepare_upstream_update()
+        target = 'skills/alpha/references/contract.md'
+        canonical = self.repo / 'patches/sample/contract.md'
+        canonical.parent.mkdir(parents=True)
+        canonical.write_bytes(b'reviewed local contract\n')
+        config = bundle.read_json(self.repo / 'bundle.json')
+        source = config['sources'][0]
+        source['overlays'] = {target: {
+            'file':'patches/sample/contract.md',
+            'upstream_sha256':hashlib.sha256(upstream[target]).hexdigest(),
+            'sha256':hashlib.sha256(canonical.read_bytes()).hexdigest()}}
+        bundle.write_json(self.repo / 'bundle.json', config)
+        lock = bundle.read_json(self.repo / bundle.LOCK)
+        lock['origins'] = {target:{'source':'sample','path':target}}
+        blobs = {target:upstream[target]}
+        bundle.apply_overlays(self.repo, source, blobs, lock['origins'])
+        (self.repo / target).write_bytes(blobs[target])
+        lock['files'][target] = hashlib.sha256(blobs[target]).hexdigest()
+        bundle.write_json(self.repo / bundle.LOCK, lock)
+        self.assertTrue(self.run_fake_update(upstream)['changed'])
+        self.assertEqual((self.repo / target).read_bytes(), canonical.read_bytes())
+        before = {p.relative_to(self.repo):p.read_bytes() for p in self.repo.rglob('*') if p.is_file()}
+        upstream[target] = b'changed upstream contract\n'
+        with self.assertRaisesRegex(ValueError, 'base changed'):
+            self.run_fake_update(upstream, sha='c' * 40)
+        self.assertEqual({p.relative_to(self.repo):p.read_bytes() for p in self.repo.rglob('*') if p.is_file()}, before)
 
     def test_license_change_stops_before_repository_writes(self):
         upstream = self.prepare_upstream_update()
