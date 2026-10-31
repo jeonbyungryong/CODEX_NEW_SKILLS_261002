@@ -155,7 +155,7 @@
         "skills/security-audit/windows-safe-input.ps1": {
           "file": "patches/security-audit/windows-safe-input.ps1",
           "upstream_sha256": null,
-          "sha256": "84dde5e2efbf55ee2aa2b5d6b932e86b9d500e5453d3f7af690dac06c6a518d4"
+          "sha256": "681dd104b206d4ee665fcbd10e4bab51cbb4a0733bb0f5de1f87f26f0404f66c"
         }
       }
     }

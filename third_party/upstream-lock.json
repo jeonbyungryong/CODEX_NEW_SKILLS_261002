@@ -13866,7 +13866,7 @@
     "skills/security-audit/validate-findings.cjs": "3cdaa76ed03db9afa047cebaa6c7d227c5935f3e4ddea26defdcf93ed5fe844d",
     "skills/security-audit/validate-findings.test.cjs": "6f9a78489f49c808d5966d54c2f5e2c20b2c780a6038f6cbd72395a819dc3af6",
     "skills/security-audit/windows-safe-input.cjs": "9d9421b3a57133af8b41af2b18eb5cf3a1bd9d364add66cc6cff8a3717ccc747",
-    "skills/security-audit/windows-safe-input.ps1": "84dde5e2efbf55ee2aa2b5d6b932e86b9d500e5453d3f7af690dac06c6a518d4",
+    "skills/security-audit/windows-safe-input.ps1": "681dd104b206d4ee665fcbd10e4bab51cbb4a0733bb0f5de1f87f26f0404f66c",
     "skills/sendcutsend/LICENSE": "c11168234f932c4a39bb640571079e73b178b4459682a5507e5944ad723058b3",
     "skills/sendcutsend/SKILL.md": "f77f8fbaa96f2f29821450a805f742d871ef83816f0dcfe346780d0ace475af5",
     "skills/sendcutsend/agents/openai.yaml": "70167b8d1ebf3665be5d8ce378c4c12cae71734819f55bfb965acd8fdfaa3154",

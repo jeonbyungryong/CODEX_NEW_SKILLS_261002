@@ -16,6 +16,9 @@ node <skill>/validate-coverage-ledger.cjs <coverage-ledger.json>
 
 The Windows branch uses a trusted fixed PowerShell bootstrap (no profiles,
 interpolation of input, policy changes, downloads or external services).
+Inside the child, module discovery is restricted to the Windows-shipped modules
+and the Utility manifest is loaded by absolute path. Other installed PowerShell
+modules and a cold discovery cache cannot delay the reader or supply its cmdlets.
 It compiles the small checked-in C# reader using the built-in .NET runtime. Paths arrive as JSON on
 stdin. Win32 CreateFileW opens reparse points themselves; disk-file/type and
 attribute checks reject links, directories and special files. Ancestor handles

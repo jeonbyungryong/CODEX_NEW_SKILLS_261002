@@ -1,4 +1,4 @@
-// Temporary phase probe: synthetic local JSON only; no secrets or target code.
+// Cold-start regression: synthetic local JSON only; no secrets or target code.
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {spawnSync}=require('node:child_process');
 if(process.platform!=='win32')process.exit(0);
@@ -11,9 +11,8 @@ function probe(name,code,input){
   const start=Date.now();
   const r=spawnSync(exe,['-NoLogo','-NoProfile','-NonInteractive','-Command',code],{input,encoding:'utf8',env,windowsHide:true,timeout:20000,maxBuffer:1024*1024});
   console.log(JSON.stringify({name,elapsed:Date.now()-start,status:r.status,error:r.error?.code,stderr:r.stderr,stdout:r.stdout}));
+  if(r.error || r.status!==0 || Date.now()-start>=10000 || !JSON.parse(r.stdout).ok) throw new Error('Windows cold-start reader failed');
 }
-probe('plain-stdin',"[Console]::Error.WriteLine('started');$data=[Console]::In.ReadToEnd();[Console]::Error.WriteLine('read');[Console]::Write('done')",'[]');
-probe('utf8-stdin',"[Console]::Error.WriteLine('started');[Console]::InputEncoding=[Text.UTF8Encoding]::new($false);[Console]::Error.WriteLine('encoding');$data=[Console]::In.ReadToEnd();[Console]::Error.WriteLine('read');[Console]::Write('done')",'[]');
 const dir=fs.mkdtempSync(path.join(os.tmpdir(),'audit-probe-'));
 try{
   const file=path.join(dir,'report.json');fs.writeFileSync(file,'[]');

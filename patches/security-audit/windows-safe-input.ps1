@@ -4,6 +4,10 @@ $ProgressPreference = 'SilentlyContinue'
 [Console]::InputEncoding = [Text.UTF8Encoding]::new($false)
 [Console]::OutputEncoding = [Text.UTF8Encoding]::new($false)
 try {
+  # Pin built-ins: Windows PowerShell otherwise scans third-party module trees
+  # on first cmdlet discovery, which can exceed the bounded reader lifetime.
+  $env:PSModulePath = $PSHOME + '\Modules'
+  Import-Module ($env:PSModulePath + '\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1') -ErrorAction Stop
   $request = [Console]::In.ReadToEnd() | ConvertFrom-Json
   Add-Type -TypeDefinition @'
 using System;
